@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: 9_SonLooksatDad_Present.ma
-//Last modified: Sat, Oct 05, 2019 09:19:53 AM
+//Last modified: Sat, Oct 05, 2019 10:04:19 AM
 //Codeset: UTF-8
 file -rdi 1 -ns "YoungerSon_complete_rig" -rfn "YoungerSon_complete_rigRN" -op
 		 "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/UnculturedCrustBucket//assets/YoungerSon_complete_rig.ma";
@@ -55,14 +55,14 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "DFD235DF-BD47-EF17-0AAC-A196ECBD9425";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -0.44321834312216413 1.4223253615990461 -0.71333620579978596 ;
-	setAttr ".r" -type "double3" -30.214922707213152 168.19999999998697 0 ;
+	setAttr ".t" -type "double3" 1.8411651748494258 4.0988345446912575 -4.6743536756982111 ;
+	setAttr ".r" -type "double3" -22.414922707212263 154.59999999998573 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "50274D4D-1147-0AA9-B52B-98BCCFB65FAD";
 	setAttr -k off ".v" no;
 	setAttr ".ovr" 1.3;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 2.7931333068830018;
+	setAttr ".coi" 8.1297294994925888;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -144,6 +144,23 @@ createNode camera -n "RENDER_CAMERAShape" -p "RENDER_CAMERA";
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 	setAttr ".dr" yes;
 	setAttr ".ai_translator" -type "string" "perspective";
+createNode transform -n "RENDER_CAMERA1";
+	rename -uid "0B9664B7-ED4B-E756-AB88-E190F916EF3D";
+	setAttr ".t" -type "double3" -0.36716236072018188 1.6026796221122566 -1.5723589572483441 ;
+	setAttr ".r" -type "double3" -26.014922707212751 167.79999999998697 0 ;
+createNode camera -n "RENDER_CAMERA1Shape" -p "RENDER_CAMERA1";
+	rename -uid "430D55C9-F246-FA58-D075-C483913F4910";
+	setAttr -k off ".v";
+	setAttr ".ovr" 1.3;
+	setAttr ".fl" 34.999999999999986;
+	setAttr ".coi" 3.6224986217649242;
+	setAttr ".imn" -type "string" "persp";
+	setAttr ".den" -type "string" "persp_depth";
+	setAttr ".man" -type "string" "persp_mask";
+	setAttr ".tp" -type "double3" 0 -0.26132171392610104 2.3856356143951416 ;
+	setAttr ".hc" -type "string" "viewSet -p %camera";
+	setAttr ".dr" yes;
+	setAttr ".ai_translator" -type "string" "perspective";
 createNode lightLinker -s -n "lightLinker1";
 	rename -uid "CF4AF743-F24B-C8AB-83A0-2AAE0E4DEEB4";
 	setAttr -s 36 ".lnk";
@@ -171,7 +188,7 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 3\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n"
 		+ "            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n"
 		+ "            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 547\n            -height 234\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"RENDER_CAMERA\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 1\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 3\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
+		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"RENDER_CAMERA1\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 1\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 3\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
 		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1100\n            -height 512\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
 		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 3\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n"
@@ -209,13 +226,13 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -highlightConnections 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n"
 		+ "                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -activeTab -1\n                -editorMode \"default\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n"
 		+ "\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Side View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Side View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"RENDER_CAMERA\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 3\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1100\\n    -height 512\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Side View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"RENDER_CAMERA\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 3\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1100\\n    -height 512\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Side View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"RENDER_CAMERA1\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 3\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1100\\n    -height 512\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Side View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"RENDER_CAMERA1\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 3\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1100\\n    -height 512\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 1.968504 -size 4.724409 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "0DAAF7EA-1D4D-BBE8-3759-C3B174BB40DF";
-	setAttr ".b" -type "string" "playbackOptions -min 1 -max 48 -ast 1 -aet 200 ";
+	setAttr ".b" -type "string" "playbackOptions -min 52 -max 84 -ast 1 -aet 200 ";
 	setAttr ".st" 6;
 createNode reference -n "YoungerSon_complete_rigRN";
 	rename -uid "03239D55-A64D-A44A-CE44-C982B965E0F7";
@@ -326,67 +343,930 @@ createNode reference -n "YoungerSon_complete_rigRN";
 		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_right|YoungerSon_complete_rig:eye|YoungerSon_complete_rig:highlight2" 
 		"scale" " -type \"double3\" 0.014262348278747597 0.014262348278747597 0.014262348278747597"
 		
-		"YoungerSon_complete_rigRN" 162
+		"YoungerSon_complete_rigRN" 721
 		2 "|YoungerSon_complete_rig:directionalLight1" "visibility" " 0"
+		2 "|YoungerSon_complete_rig:Master_Handle" "visibility" " 1"
 		2 "|YoungerSon_complete_rig:Master_Handle" "translate" " -type \"double3\" -0.66399078735942485 35.14460636647462621 -2.52697673337618678"
 		
+		2 "|YoungerSon_complete_rig:Master_Handle" "translateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle" "translateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle" "translateZ" " -av"
 		2 "|YoungerSon_complete_rig:Master_Handle" "rotate" " -type \"double3\" 0 179.99999999999994316 0"
 		
 		2 "|YoungerSon_complete_rig:Master_Handle" "scale" " -type \"double3\" 0.019631010908348078 0.019631010908348078 0.019631010908348078"
 		
 		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle" 
-		"rotate" " -type \"double3\" -2.78860903815505035 0 0"
+		"visibility" " -av 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle" 
+		"translateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle" 
+		"translateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle" 
+		"translateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle" 
+		"rotate" " -type \"double3\" -4.07236231142227734 -0.43991582322822825 -6.15508683901784881"
+		
 		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle" 
 		"rotateX" " -av"
 		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle" 
 		"rotateY" " -av"
 		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle" 
 		"rotateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle" 
+		"scaleX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle" 
+		"scaleY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle" 
+		"scaleZ" " -av"
 		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle" 
-		"rotate" " -type \"double3\" -10.94595708318768068 0 0"
+		"visibility" " -av 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle" 
+		"translateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle" 
+		"translateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle" 
+		"translateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle" 
+		"rotate" " -type \"double3\" -12.57308245384974477 -0.3836085450260438 1.00703752713401595"
+		
 		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle" 
 		"rotateX" " -av"
 		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle" 
 		"rotateY" " -av"
 		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle" 
+		"rotateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle" 
+		"scaleX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle" 
+		"scaleY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle" 
+		"scaleZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle" 
+		"visibility" " -av 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle" 
+		"translateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle" 
+		"translateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle" 
+		"translateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle" 
+		"rotate" " -type \"double3\" -1.33097349202113491 0 -0.86638788095261499"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle" 
+		"rotateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle" 
+		"rotateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle" 
 		"rotateZ" " -av"
 		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle" 
-		"rotate" " -type \"double3\" 0 0 0"
+		"scale" " -type \"double3\" 1 1 1"
 		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle" 
-		"rotateZ" " -av"
+		"scaleX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle" 
+		"scaleY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle" 
+		"scaleZ" " -av"
 		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:neck_handle" 
-		"rotate" " -type \"double3\" -10.61103713744208754 0 0"
+		"visibility" " -av 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:neck_handle" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:neck_handle" 
+		"translateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:neck_handle" 
+		"translateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:neck_handle" 
+		"translateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:neck_handle" 
+		"rotate" " -type \"double3\" -10.65896915491070729 -0.48109871944140153 7.24951230583360484"
+		
 		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:neck_handle" 
 		"rotateX" " -av"
 		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:neck_handle" 
 		"rotateY" " -av"
 		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:neck_handle" 
 		"rotateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:neck_handle" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:neck_handle" 
+		"scaleX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:neck_handle" 
+		"scaleY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:neck_handle" 
+		"scaleZ" " -av"
 		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:shoulder_left_handle" 
-		"rotate" " -type \"double3\" 0 0 52.79958492066633369"
+		"visibility" " -av 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:shoulder_left_handle" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:shoulder_left_handle" 
+		"translateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:shoulder_left_handle" 
+		"translateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:shoulder_left_handle" 
+		"translateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:shoulder_left_handle" 
+		"rotate" " -type \"double3\" 0 0 54.44586705751621025"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:shoulder_left_handle" 
+		"rotateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:shoulder_left_handle" 
+		"rotateY" " -av"
 		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:shoulder_left_handle" 
 		"rotateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:shoulder_left_handle" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:shoulder_left_handle" 
+		"scaleX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:shoulder_left_handle" 
+		"scaleY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:shoulder_left_handle" 
+		"scaleZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:shoulder_left_handle|YoungerSon_complete_rig:elbow_left_handle" 
+		"visibility" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:shoulder_left_handle|YoungerSon_complete_rig:elbow_left_handle" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:shoulder_left_handle|YoungerSon_complete_rig:elbow_left_handle" 
+		"translateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:shoulder_left_handle|YoungerSon_complete_rig:elbow_left_handle" 
+		"translateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:shoulder_left_handle|YoungerSon_complete_rig:elbow_left_handle" 
+		"translateZ" " -av"
 		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:shoulder_left_handle|YoungerSon_complete_rig:elbow_left_handle" 
 		"rotate" " -type \"double3\" 0 0 16.92263675485626351"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:shoulder_left_handle|YoungerSon_complete_rig:elbow_left_handle" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:shoulder_left_handle|YoungerSon_complete_rig:elbow_left_handle|YoungerSon_complete_rig:wrist_left_handle" 
+		"visibility" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:shoulder_left_handle|YoungerSon_complete_rig:elbow_left_handle|YoungerSon_complete_rig:wrist_left_handle" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:shoulder_left_handle|YoungerSon_complete_rig:elbow_left_handle|YoungerSon_complete_rig:wrist_left_handle" 
+		"translateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:shoulder_left_handle|YoungerSon_complete_rig:elbow_left_handle|YoungerSon_complete_rig:wrist_left_handle" 
+		"translateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:shoulder_left_handle|YoungerSon_complete_rig:elbow_left_handle|YoungerSon_complete_rig:wrist_left_handle" 
+		"translateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:shoulder_left_handle|YoungerSon_complete_rig:elbow_left_handle|YoungerSon_complete_rig:wrist_left_handle" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:shoulder_left_handle|YoungerSon_complete_rig:elbow_left_handle|YoungerSon_complete_rig:wrist_left_handle" 
+		"scale" " -type \"double3\" 1 1 1"
 		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:shoulder_right_handle" 
-		"rotate" " -type \"double3\" 0 0 -59.10526455818207126"
+		"visibility" " -av 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:shoulder_right_handle" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:shoulder_right_handle" 
+		"translateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:shoulder_right_handle" 
+		"translateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:shoulder_right_handle" 
+		"translateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:shoulder_right_handle" 
+		"rotate" " -type \"double3\" 0 0 -60.0478785496540084"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:shoulder_right_handle" 
+		"rotateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:shoulder_right_handle" 
+		"rotateY" " -av"
 		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:shoulder_right_handle" 
 		"rotateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:shoulder_right_handle" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:shoulder_right_handle" 
+		"scaleX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:shoulder_right_handle" 
+		"scaleY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:shoulder_right_handle" 
+		"scaleZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:shoulder_right_handle|YoungerSon_complete_rig:elbow_right_handle" 
+		"visibility" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:shoulder_right_handle|YoungerSon_complete_rig:elbow_right_handle" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:shoulder_right_handle|YoungerSon_complete_rig:elbow_right_handle" 
+		"translateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:shoulder_right_handle|YoungerSon_complete_rig:elbow_right_handle" 
+		"translateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:shoulder_right_handle|YoungerSon_complete_rig:elbow_right_handle" 
+		"translateZ" " -av"
 		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:shoulder_right_handle|YoungerSon_complete_rig:elbow_right_handle" 
 		"rotate" " -type \"double3\" 0 0 -11.6084131223272724"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:shoulder_right_handle|YoungerSon_complete_rig:elbow_right_handle" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:shoulder_right_handle|YoungerSon_complete_rig:elbow_right_handle|YoungerSon_complete_rig:wrist_right_handle" 
+		"visibility" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:shoulder_right_handle|YoungerSon_complete_rig:elbow_right_handle|YoungerSon_complete_rig:wrist_right_handle" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:shoulder_right_handle|YoungerSon_complete_rig:elbow_right_handle|YoungerSon_complete_rig:wrist_right_handle" 
+		"translateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:shoulder_right_handle|YoungerSon_complete_rig:elbow_right_handle|YoungerSon_complete_rig:wrist_right_handle" 
+		"translateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:shoulder_right_handle|YoungerSon_complete_rig:elbow_right_handle|YoungerSon_complete_rig:wrist_right_handle" 
+		"translateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:shoulder_right_handle|YoungerSon_complete_rig:elbow_right_handle|YoungerSon_complete_rig:wrist_right_handle" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:COG_handle|YoungerSon_complete_rig:back_handle|YoungerSon_complete_rig:chest_handle|YoungerSon_complete_rig:shoulder_right_handle|YoungerSon_complete_rig:elbow_right_handle|YoungerSon_complete_rig:wrist_right_handle" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:rightFootIK" 
+		"visibility" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:rightFootIK" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:rightFootIK" 
+		"translateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:rightFootIK" 
+		"translateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:rightFootIK" 
+		"translateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:rightFootIK" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:rightFootIK" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:rightFootIK|YoungerSon_complete_rig:ikHandle1_rightFoot" 
+		"visibility" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:rightFootIK|YoungerSon_complete_rig:ikHandle1_rightFoot" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:rightFootIK|YoungerSon_complete_rig:ikHandle1_rightFoot" 
+		"translateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:rightFootIK|YoungerSon_complete_rig:ikHandle1_rightFoot" 
+		"translateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:rightFootIK|YoungerSon_complete_rig:ikHandle1_rightFoot" 
+		"translateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:rightFootIK|YoungerSon_complete_rig:ikHandle1_rightFoot" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:rightFootIK|YoungerSon_complete_rig:ikHandle1_rightFoot" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:rightFootIK|YoungerSon_complete_rig:ikHandle1_rightFoot" 
+		"poleVector" " -type \"double3\" 0.0070465554794069988 -0.25141876742875569 0.78324273994179827"
+		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:rightFootIK|YoungerSon_complete_rig:ikHandle1_rightFoot" 
+		"poleVectorX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:rightFootIK|YoungerSon_complete_rig:ikHandle1_rightFoot" 
+		"poleVectorY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:rightFootIK|YoungerSon_complete_rig:ikHandle1_rightFoot" 
+		"poleVectorZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:rightFootIK|YoungerSon_complete_rig:ikHandle1_rightFoot" 
+		"offset" " 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:rightFootIK|YoungerSon_complete_rig:ikHandle1_rightFoot" 
+		"roll" " 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:rightFootIK|YoungerSon_complete_rig:ikHandle1_rightFoot" 
+		"twist" " 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:rightFootIK|YoungerSon_complete_rig:ikHandle1_rightFoot" 
+		"ikBlend" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:rightFootIK|YoungerSon_complete_rig:ikHandle1_rightFoot|YoungerSon_complete_rig:ikHandle1_rightFoot_poleVectorConstraint1" 
+		"nodeState" " -k 1 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:rightFootIK|YoungerSon_complete_rig:ikHandle1_rightFoot|YoungerSon_complete_rig:ikHandle1_rightFoot_poleVectorConstraint1" 
+		"offset" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:rightFootIK|YoungerSon_complete_rig:ikHandle1_rightFoot|YoungerSon_complete_rig:ikHandle1_rightFoot_poleVectorConstraint1" 
+		"PV_leg_rightW0" " -k 1 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:leftFootIK" 
+		"visibility" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:leftFootIK" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:leftFootIK" 
+		"translateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:leftFootIK" 
+		"translateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:leftFootIK" 
+		"translateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:leftFootIK" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:leftFootIK" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:leftFootIK|YoungerSon_complete_rig:ikHandle2_leftFoot" 
+		"visibility" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:leftFootIK|YoungerSon_complete_rig:ikHandle2_leftFoot" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:leftFootIK|YoungerSon_complete_rig:ikHandle2_leftFoot" 
+		"translateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:leftFootIK|YoungerSon_complete_rig:ikHandle2_leftFoot" 
+		"translateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:leftFootIK|YoungerSon_complete_rig:ikHandle2_leftFoot" 
+		"translateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:leftFootIK|YoungerSon_complete_rig:ikHandle2_leftFoot" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:leftFootIK|YoungerSon_complete_rig:ikHandle2_leftFoot" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:leftFootIK|YoungerSon_complete_rig:ikHandle2_leftFoot" 
+		"poleVector" " -type \"double3\" 0.0057631611026048753 -0.28502165214248287 0.78564907524597272"
+		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:leftFootIK|YoungerSon_complete_rig:ikHandle2_leftFoot" 
+		"poleVectorX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:leftFootIK|YoungerSon_complete_rig:ikHandle2_leftFoot" 
+		"poleVectorY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:leftFootIK|YoungerSon_complete_rig:ikHandle2_leftFoot" 
+		"poleVectorZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:leftFootIK|YoungerSon_complete_rig:ikHandle2_leftFoot" 
+		"offset" " 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:leftFootIK|YoungerSon_complete_rig:ikHandle2_leftFoot" 
+		"roll" " 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:leftFootIK|YoungerSon_complete_rig:ikHandle2_leftFoot" 
+		"twist" " 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:leftFootIK|YoungerSon_complete_rig:ikHandle2_leftFoot" 
+		"ikBlend" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:leftFootIK|YoungerSon_complete_rig:ikHandle2_leftFoot|YoungerSon_complete_rig:ikHandle2_leftFoot_poleVectorConstraint1" 
+		"nodeState" " -k 1 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:leftFootIK|YoungerSon_complete_rig:ikHandle2_leftFoot|YoungerSon_complete_rig:ikHandle2_leftFoot_poleVectorConstraint1" 
+		"offset" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:leftFootIK|YoungerSon_complete_rig:ikHandle2_leftFoot|YoungerSon_complete_rig:ikHandle2_leftFoot_poleVectorConstraint1" 
+		"PV_leg_leftW0" " -k 1 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:PV_leg_right" 
+		"visibility" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:PV_leg_right" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:PV_leg_right" 
+		"translateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:PV_leg_right" 
+		"translateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:PV_leg_right" 
+		"translateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:PV_leg_right" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:PV_leg_right" 
+		"scale" " -type \"double3\" 0.12829772627563851 0.12829772627563851 0.12829772627563851"
+		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:PV_leg_left" 
+		"visibility" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:PV_leg_left" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:PV_leg_left" 
+		"translateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:PV_leg_left" 
+		"translateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:PV_leg_left" 
+		"translateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:PV_leg_left" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:PV_leg_left" 
+		"scale" " -type \"double3\" 0.12829772627563851 0.12829772627563851 0.12829772627563851"
+		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center" 
+		"visibility" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center" 
+		"translate" " -type \"double3\" 0.13071898977551655 -16.75275650885547662 0.92172291964671871"
+		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center" 
+		"translateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center" 
+		"translateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center" 
+		"translateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center" 
+		"rotate" " -type \"double3\" -4.07236231142227734 -0.43991582322822814 -6.15508683901784881"
+		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center" 
+		"rotateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center" 
+		"rotateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center" 
+		"rotateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1" 
+		"visibility" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1" 
+		"translate" " -type \"double3\" -0.093477448919323081 6.4699820093788567 -9.4026206376440769e-08"
+		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1" 
+		"translateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1" 
+		"translateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1" 
+		"translateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1" 
+		"rotate" " -type \"double3\" -12.57308245384974299 -0.38360854502604369 1.00703752713401573"
+		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1" 
+		"rotateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1" 
+		"rotateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1" 
+		"rotateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest" 
+		"visibility" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest" 
+		"translate" " -type \"double3\" 0 4.28547029602147145 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest" 
+		"translateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest" 
+		"translateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest" 
+		"translateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:neck" 
+		"visibility" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:neck" 
+		"translate" " -type \"double3\" 0.14344760098745013 5.19153245241182759 -0.12065692115604776"
+		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:neck" 
+		"translateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:neck" 
+		"translateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:neck" 
+		"translateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:neck" 
+		"rotate" " -type \"double3\" -11.9793206940436523 -0.31302960525562284 6.39227490421139954"
+		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:neck" 
+		"rotateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:neck" 
+		"rotateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:neck" 
+		"rotateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:neck" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:neck|YoungerSon_complete_rig:head" 
+		"visibility" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:neck|YoungerSon_complete_rig:head" 
+		"translate" " -type \"double3\" -0.12986273624307951 27.14131187480264629 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:neck|YoungerSon_complete_rig:head" 
+		"translateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:neck|YoungerSon_complete_rig:head" 
+		"translateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:neck|YoungerSon_complete_rig:head" 
+		"translateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:neck|YoungerSon_complete_rig:head" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:neck|YoungerSon_complete_rig:head" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:neck|YoungerSon_complete_rig:neck_parentConstraint1" 
+		"nodeState" " -k 1 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:neck|YoungerSon_complete_rig:neck_parentConstraint1" 
+		"target[0].targetOffsetTranslate" " -type \"double3\" 2.237464130638855e-09 6.6825022182470653e-09 2.7590302265068085e-09"
+		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:neck|YoungerSon_complete_rig:neck_parentConstraint1" 
+		"target[0].targetOffsetRotate" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:neck|YoungerSon_complete_rig:neck_parentConstraint1" 
+		"interpType" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:neck|YoungerSon_complete_rig:neck_parentConstraint1" 
+		"rotationDecompositionTarget" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:neck|YoungerSon_complete_rig:neck_parentConstraint1" 
+		"neck_handleW0" " -k 1 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_right" 
+		"visibility" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_right" 
+		"translate" " -type \"double3\" 6.26646033493879884 -0.28881649813573418 -0.16742219944852188"
+		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_right" 
+		"translateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_right" 
+		"translateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_right" 
+		"translateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_right" 
+		"rotate" " -type \"double3\" -0.66461305676159055 -1.15318670123270839 -60.90757782795577668"
+		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_right" 
+		"rotateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_right" 
+		"rotateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_right" 
+		"rotateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_right" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_right|YoungerSon_complete_rig:elbow_right" 
+		"visibility" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_right|YoungerSon_complete_rig:elbow_right" 
+		"translate" " -type \"double3\" 6.73875668825298746 0.16336382899461199 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_right|YoungerSon_complete_rig:elbow_right" 
+		"translateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_right|YoungerSon_complete_rig:elbow_right" 
+		"translateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_right|YoungerSon_complete_rig:elbow_right" 
+		"translateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_right|YoungerSon_complete_rig:elbow_right" 
+		"rotate" " -type \"double3\" 0 0 -11.60841312232727596"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_right|YoungerSon_complete_rig:elbow_right" 
+		"rotateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_right|YoungerSon_complete_rig:elbow_right" 
+		"rotateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_right|YoungerSon_complete_rig:elbow_right" 
+		"rotateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_right|YoungerSon_complete_rig:elbow_right" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_right|YoungerSon_complete_rig:elbow_right|YoungerSon_complete_rig:wrist_right" 
+		"visibility" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_right|YoungerSon_complete_rig:elbow_right|YoungerSon_complete_rig:wrist_right" 
+		"translate" " -type \"double3\" 4.90091394206031161 -0.040840949517182423 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_right|YoungerSon_complete_rig:elbow_right|YoungerSon_complete_rig:wrist_right" 
+		"translateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_right|YoungerSon_complete_rig:elbow_right|YoungerSon_complete_rig:wrist_right" 
+		"translateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_right|YoungerSon_complete_rig:elbow_right|YoungerSon_complete_rig:wrist_right" 
+		"translateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_right|YoungerSon_complete_rig:elbow_right|YoungerSon_complete_rig:wrist_right" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_right|YoungerSon_complete_rig:elbow_right|YoungerSon_complete_rig:wrist_right" 
+		"rotateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_right|YoungerSon_complete_rig:elbow_right|YoungerSon_complete_rig:wrist_right" 
+		"rotateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_right|YoungerSon_complete_rig:elbow_right|YoungerSon_complete_rig:wrist_right" 
+		"rotateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_right|YoungerSon_complete_rig:elbow_right|YoungerSon_complete_rig:wrist_right" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_right|YoungerSon_complete_rig:elbow_right|YoungerSon_complete_rig:wrist_right|YoungerSon_complete_rig:hand_rigth" 
+		"visibility" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_right|YoungerSon_complete_rig:elbow_right|YoungerSon_complete_rig:wrist_right|YoungerSon_complete_rig:hand_rigth" 
+		"translate" " -type \"double3\" 2.81802551668468526 -0.040840949517170259 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_right|YoungerSon_complete_rig:elbow_right|YoungerSon_complete_rig:wrist_right|YoungerSon_complete_rig:hand_rigth" 
+		"translateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_right|YoungerSon_complete_rig:elbow_right|YoungerSon_complete_rig:wrist_right|YoungerSon_complete_rig:hand_rigth" 
+		"translateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_right|YoungerSon_complete_rig:elbow_right|YoungerSon_complete_rig:wrist_right|YoungerSon_complete_rig:hand_rigth" 
+		"translateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_right|YoungerSon_complete_rig:elbow_right|YoungerSon_complete_rig:wrist_right|YoungerSon_complete_rig:hand_rigth" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_right|YoungerSon_complete_rig:elbow_right|YoungerSon_complete_rig:wrist_right|YoungerSon_complete_rig:hand_rigth" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_right|YoungerSon_complete_rig:elbow_right|YoungerSon_complete_rig:wrist_right|YoungerSon_complete_rig:wrist_right_parentConstraint1" 
+		"nodeState" " -k 1 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_right|YoungerSon_complete_rig:elbow_right|YoungerSon_complete_rig:wrist_right|YoungerSon_complete_rig:wrist_right_parentConstraint1" 
+		"target[0].targetOffsetTranslate" " -type \"double3\" -4.1121836247270949e-07 2.2576531311102596e-07 2.4623836414328082e-08"
+		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_right|YoungerSon_complete_rig:elbow_right|YoungerSon_complete_rig:wrist_right|YoungerSon_complete_rig:wrist_right_parentConstraint1" 
+		"target[0].targetOffsetRotate" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_right|YoungerSon_complete_rig:elbow_right|YoungerSon_complete_rig:wrist_right|YoungerSon_complete_rig:wrist_right_parentConstraint1" 
+		"interpType" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_right|YoungerSon_complete_rig:elbow_right|YoungerSon_complete_rig:wrist_right|YoungerSon_complete_rig:wrist_right_parentConstraint1" 
+		"rotationDecompositionTarget" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_right|YoungerSon_complete_rig:elbow_right|YoungerSon_complete_rig:wrist_right|YoungerSon_complete_rig:wrist_right_parentConstraint1" 
+		"wrist_right_handleW0" " -k 1 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_right|YoungerSon_complete_rig:elbow_right|YoungerSon_complete_rig:elbow_right_parentConstraint1" 
+		"nodeState" " -k 1 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_right|YoungerSon_complete_rig:elbow_right|YoungerSon_complete_rig:elbow_right_parentConstraint1" 
+		"target[0].targetOffsetTranslate" " -type \"double3\" -1.6107896527728369e-07 7.2682387219913367e-08 2.4623836303305773e-08"
+		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_right|YoungerSon_complete_rig:elbow_right|YoungerSon_complete_rig:elbow_right_parentConstraint1" 
+		"target[0].targetOffsetRotate" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_right|YoungerSon_complete_rig:elbow_right|YoungerSon_complete_rig:elbow_right_parentConstraint1" 
+		"interpType" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_right|YoungerSon_complete_rig:elbow_right|YoungerSon_complete_rig:elbow_right_parentConstraint1" 
+		"rotationDecompositionTarget" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_right|YoungerSon_complete_rig:elbow_right|YoungerSon_complete_rig:elbow_right_parentConstraint1" 
+		"elbow_right_handleW0" " -k 1 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_right|YoungerSon_complete_rig:shoulder_right_parentConstraint1" 
+		"nodeState" " -k 1 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_right|YoungerSon_complete_rig:shoulder_right_parentConstraint1" 
+		"target[0].targetOffsetTranslate" " -type \"double3\" -1.7476517655268248e-07 2.0817695478569928e-07 2.462383585921657e-08"
+		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_right|YoungerSon_complete_rig:shoulder_right_parentConstraint1" 
+		"target[0].targetOffsetRotate" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_right|YoungerSon_complete_rig:shoulder_right_parentConstraint1" 
+		"interpType" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_right|YoungerSon_complete_rig:shoulder_right_parentConstraint1" 
+		"rotationDecompositionTarget" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_right|YoungerSon_complete_rig:shoulder_right_parentConstraint1" 
+		"shoulder_right_handleW0" " -k 1 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_left" 
+		"visibility" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_left" 
+		"translate" " -type \"double3\" -6.27231355212524022 -0.099185165125238228 -0.16742252594474039"
+		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_left" 
+		"translateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_left" 
+		"translateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_left" 
+		"translateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_left" 
+		"rotate" " -type \"double3\" -0.77401579848500424 1.08280252403695165 53.57216499078963778"
+		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_left" 
+		"rotateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_left" 
+		"rotateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_left" 
+		"rotateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_left" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_left|YoungerSon_complete_rig:elbow_left" 
+		"visibility" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_left|YoungerSon_complete_rig:elbow_left" 
+		"translate" " -type \"double3\" -6.73876229902749913 0.16334238817880742 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_left|YoungerSon_complete_rig:elbow_left" 
+		"translateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_left|YoungerSon_complete_rig:elbow_left" 
+		"translateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_left|YoungerSon_complete_rig:elbow_left" 
+		"translateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_left|YoungerSon_complete_rig:elbow_left" 
+		"rotate" " -type \"double3\" 0 0 16.92263675485626351"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_left|YoungerSon_complete_rig:elbow_left" 
+		"rotateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_left|YoungerSon_complete_rig:elbow_left" 
+		"rotateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_left|YoungerSon_complete_rig:elbow_left" 
+		"rotateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_left|YoungerSon_complete_rig:elbow_left" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_left|YoungerSon_complete_rig:elbow_left|YoungerSon_complete_rig:wrist_left" 
+		"visibility" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_left|YoungerSon_complete_rig:elbow_left|YoungerSon_complete_rig:wrist_left" 
+		"translate" " -type \"double3\" -4.90090968000000871 -0.040843199999999413 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_left|YoungerSon_complete_rig:elbow_left|YoungerSon_complete_rig:wrist_left" 
+		"translateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_left|YoungerSon_complete_rig:elbow_left|YoungerSon_complete_rig:wrist_left" 
+		"translateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_left|YoungerSon_complete_rig:elbow_left|YoungerSon_complete_rig:wrist_left" 
+		"translateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_left|YoungerSon_complete_rig:elbow_left|YoungerSon_complete_rig:wrist_left" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_left|YoungerSon_complete_rig:elbow_left|YoungerSon_complete_rig:wrist_left" 
+		"rotateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_left|YoungerSon_complete_rig:elbow_left|YoungerSon_complete_rig:wrist_left" 
+		"rotateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_left|YoungerSon_complete_rig:elbow_left|YoungerSon_complete_rig:wrist_left" 
+		"rotateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_left|YoungerSon_complete_rig:elbow_left|YoungerSon_complete_rig:wrist_left" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_left|YoungerSon_complete_rig:elbow_left|YoungerSon_complete_rig:wrist_left|YoungerSon_complete_rig:hand_rigth" 
+		"visibility" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_left|YoungerSon_complete_rig:elbow_left|YoungerSon_complete_rig:wrist_left|YoungerSon_complete_rig:hand_rigth" 
+		"translate" " -type \"double3\" -2.81802840000000154 -0.040843200000000336 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_left|YoungerSon_complete_rig:elbow_left|YoungerSon_complete_rig:wrist_left|YoungerSon_complete_rig:hand_rigth" 
+		"translateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_left|YoungerSon_complete_rig:elbow_left|YoungerSon_complete_rig:wrist_left|YoungerSon_complete_rig:hand_rigth" 
+		"translateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_left|YoungerSon_complete_rig:elbow_left|YoungerSon_complete_rig:wrist_left|YoungerSon_complete_rig:hand_rigth" 
+		"translateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_left|YoungerSon_complete_rig:elbow_left|YoungerSon_complete_rig:wrist_left|YoungerSon_complete_rig:hand_rigth" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_left|YoungerSon_complete_rig:elbow_left|YoungerSon_complete_rig:wrist_left|YoungerSon_complete_rig:hand_rigth" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_left|YoungerSon_complete_rig:elbow_left|YoungerSon_complete_rig:wrist_left|YoungerSon_complete_rig:wrist_left_parentConstraint1" 
+		"nodeState" " -k 1 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_left|YoungerSon_complete_rig:elbow_left|YoungerSon_complete_rig:wrist_left|YoungerSon_complete_rig:wrist_left_parentConstraint1" 
+		"target[0].targetOffsetTranslate" " -type \"double3\" -9.5117673737377107e-07 -2.5743410958511959e-08 2.4623835193082748e-08"
+		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_left|YoungerSon_complete_rig:elbow_left|YoungerSon_complete_rig:wrist_left|YoungerSon_complete_rig:wrist_left_parentConstraint1" 
+		"target[0].targetOffsetRotate" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_left|YoungerSon_complete_rig:elbow_left|YoungerSon_complete_rig:wrist_left|YoungerSon_complete_rig:wrist_left_parentConstraint1" 
+		"interpType" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_left|YoungerSon_complete_rig:elbow_left|YoungerSon_complete_rig:wrist_left|YoungerSon_complete_rig:wrist_left_parentConstraint1" 
+		"rotationDecompositionTarget" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_left|YoungerSon_complete_rig:elbow_left|YoungerSon_complete_rig:wrist_left|YoungerSon_complete_rig:wrist_left_parentConstraint1" 
+		"wrist_left_handleW0" " -k 1 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_left|YoungerSon_complete_rig:elbow_left|YoungerSon_complete_rig:elbow_left_parentConstraint1" 
+		"nodeState" " -k 1 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_left|YoungerSon_complete_rig:elbow_left|YoungerSon_complete_rig:elbow_left_parentConstraint1" 
+		"target[0].targetOffsetTranslate" " -type \"double3\" 2.586694591855121e-07 1.6430785887422417e-07 2.4623835526149662e-08"
+		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_left|YoungerSon_complete_rig:elbow_left|YoungerSon_complete_rig:elbow_left_parentConstraint1" 
+		"target[0].targetOffsetRotate" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_left|YoungerSon_complete_rig:elbow_left|YoungerSon_complete_rig:elbow_left_parentConstraint1" 
+		"interpType" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_left|YoungerSon_complete_rig:elbow_left|YoungerSon_complete_rig:elbow_left_parentConstraint1" 
+		"rotationDecompositionTarget" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_left|YoungerSon_complete_rig:elbow_left|YoungerSon_complete_rig:elbow_left_parentConstraint1" 
+		"elbow_left_handleW0" " -k 1 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_left|YoungerSon_complete_rig:shoulder_left_parentConstraint1" 
+		"nodeState" " -k 1 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_left|YoungerSon_complete_rig:shoulder_left_parentConstraint1" 
+		"target[0].targetOffsetTranslate" " -type \"double3\" 1.1997683913023138e-07 -1.5663819841194027e-07 2.4623835970238865e-08"
+		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_left|YoungerSon_complete_rig:shoulder_left_parentConstraint1" 
+		"target[0].targetOffsetRotate" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_left|YoungerSon_complete_rig:shoulder_left_parentConstraint1" 
+		"interpType" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_left|YoungerSon_complete_rig:shoulder_left_parentConstraint1" 
+		"rotationDecompositionTarget" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:chest|YoungerSon_complete_rig:shoulder_left|YoungerSon_complete_rig:shoulder_left_parentConstraint1" 
+		"shoulder_left_handleW0" " -k 1 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:spine1_parentConstraint1" 
+		"nodeState" " -k 1 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:spine1_parentConstraint1" 
+		"target[0].targetOffsetTranslate" " -type \"double3\" 7.0857125722412206e-10 4.3166478391754021e-07 2.7590293383283884e-09"
+		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:spine1_parentConstraint1" 
+		"target[0].targetOffsetRotate" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:spine1_parentConstraint1" 
+		"interpType" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:spine1_parentConstraint1" 
+		"rotationDecompositionTarget" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:spine1|YoungerSon_complete_rig:spine1_parentConstraint1" 
+		"back_handleW0" " -k 1 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:thigh_right" 
+		"visibility" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:thigh_right" 
+		"translate" " -type \"double3\" 4.77637516700032272 -2.1114968371948204 0.48797094266765129"
+		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:thigh_right" 
+		"translateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:thigh_right" 
+		"translateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:thigh_right" 
+		"translateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:thigh_right" 
+		"rotate" " -type \"double3\" -7.95322020510073457 0.15690117114472718 7.09644188280377985"
+		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:thigh_right" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:thigh_right|YoungerSon_complete_rig:knee_right" 
+		"visibility" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:thigh_right|YoungerSon_complete_rig:knee_right" 
+		"translate" " -type \"double3\" 0 -8.1499220770177736 0.65062792355686661"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:thigh_right|YoungerSon_complete_rig:knee_right" 
+		"translateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:thigh_right|YoungerSon_complete_rig:knee_right" 
+		"translateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:thigh_right|YoungerSon_complete_rig:knee_right" 
+		"translateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:thigh_right|YoungerSon_complete_rig:knee_right" 
+		"rotate" " -type \"double3\" 25.33225748572481351 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:thigh_right|YoungerSon_complete_rig:knee_right" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:thigh_right|YoungerSon_complete_rig:knee_right|YoungerSon_complete_rig:ankle_right" 
+		"visibility" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:thigh_right|YoungerSon_complete_rig:knee_right|YoungerSon_complete_rig:ankle_right" 
+		"translate" " -type \"double3\" 0 -8.11060487865943536 0.32531396177843724"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:thigh_right|YoungerSon_complete_rig:knee_right|YoungerSon_complete_rig:ankle_right" 
+		"translateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:thigh_right|YoungerSon_complete_rig:knee_right|YoungerSon_complete_rig:ankle_right" 
+		"translateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:thigh_right|YoungerSon_complete_rig:knee_right|YoungerSon_complete_rig:ankle_right" 
+		"translateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:thigh_right|YoungerSon_complete_rig:knee_right|YoungerSon_complete_rig:ankle_right" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:thigh_right|YoungerSon_complete_rig:knee_right|YoungerSon_complete_rig:ankle_right" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:thigh_right|YoungerSon_complete_rig:knee_right|YoungerSon_complete_rig:effector1" 
+		"visibility" " 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:thigh_right|YoungerSon_complete_rig:knee_right|YoungerSon_complete_rig:effector1" 
+		"translateX" " -av 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:thigh_right|YoungerSon_complete_rig:knee_right|YoungerSon_complete_rig:effector1" 
+		"translateY" " -av -8.11060487865943536"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:thigh_right|YoungerSon_complete_rig:knee_right|YoungerSon_complete_rig:effector1" 
+		"translateZ" " -av 0.32531396177843724"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:thigh_right|YoungerSon_complete_rig:knee_right|YoungerSon_complete_rig:effector1" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:thigh_right|YoungerSon_complete_rig:knee_right|YoungerSon_complete_rig:effector1" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:thigh_right|YoungerSon_complete_rig:knee_right|YoungerSon_complete_rig:effector1" 
+		"hideDisplay" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:thigh_left" 
+		"visibility" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:thigh_left" 
+		"translate" " -type \"double3\" -4.77638919210154089 -2.11149836726097817 0.48797094266765129"
+		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:thigh_left" 
+		"translateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:thigh_left" 
+		"translateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:thigh_left" 
+		"translateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:thigh_left" 
+		"rotate" " -type \"double3\" 5.72075781324318466 0.12909957757775037 6.85121985217669671"
+		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:thigh_left" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:thigh_left|YoungerSon_complete_rig:knee_left" 
+		"visibility" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:thigh_left|YoungerSon_complete_rig:knee_left" 
+		"translate" " -type \"double3\" 0 -8.14992527999999972 0.65062792355686661"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:thigh_left|YoungerSon_complete_rig:knee_left" 
+		"translateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:thigh_left|YoungerSon_complete_rig:knee_left" 
+		"translateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:thigh_left|YoungerSon_complete_rig:knee_left" 
+		"translateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:thigh_left|YoungerSon_complete_rig:knee_left" 
+		"rotate" " -type \"double3\" -2.2671286861424842 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:thigh_left|YoungerSon_complete_rig:knee_left" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:thigh_left|YoungerSon_complete_rig:knee_left|YoungerSon_complete_rig:ankle_left" 
+		"visibility" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:thigh_left|YoungerSon_complete_rig:knee_left|YoungerSon_complete_rig:ankle_left" 
+		"translate" " -type \"double3\" 0 -8.11054079793008675 0.32531396177843724"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:thigh_left|YoungerSon_complete_rig:knee_left|YoungerSon_complete_rig:ankle_left" 
+		"translateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:thigh_left|YoungerSon_complete_rig:knee_left|YoungerSon_complete_rig:ankle_left" 
+		"translateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:thigh_left|YoungerSon_complete_rig:knee_left|YoungerSon_complete_rig:ankle_left" 
+		"translateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:thigh_left|YoungerSon_complete_rig:knee_left|YoungerSon_complete_rig:ankle_left" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:thigh_left|YoungerSon_complete_rig:knee_left|YoungerSon_complete_rig:ankle_left" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:thigh_left|YoungerSon_complete_rig:knee_left|YoungerSon_complete_rig:effector2" 
+		"visibility" " 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:thigh_left|YoungerSon_complete_rig:knee_left|YoungerSon_complete_rig:effector2" 
+		"translateX" " -av 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:thigh_left|YoungerSon_complete_rig:knee_left|YoungerSon_complete_rig:effector2" 
+		"translateY" " -av -8.11054079793008675"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:thigh_left|YoungerSon_complete_rig:knee_left|YoungerSon_complete_rig:effector2" 
+		"translateZ" " -av 0.32531396177843724"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:thigh_left|YoungerSon_complete_rig:knee_left|YoungerSon_complete_rig:effector2" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:thigh_left|YoungerSon_complete_rig:knee_left|YoungerSon_complete_rig:effector2" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:thigh_left|YoungerSon_complete_rig:knee_left|YoungerSon_complete_rig:effector2" 
+		"hideDisplay" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:center_parentConstraint1" 
+		"nodeState" " -k 1 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:center_parentConstraint1" 
+		"target[0].targetOffsetTranslate" " -type \"double3\" -3.7623346105242206e-09 -3.9396465822960636e-07 2.7590292273060864e-09"
+		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:center_parentConstraint1" 
+		"target[0].targetOffsetRotate" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:center_parentConstraint1" 
+		"interpType" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:center_parentConstraint1" 
+		"rotationDecompositionTarget" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:skeleton_center|YoungerSon_complete_rig:center_parentConstraint1" 
+		"COG_handleW0" " -k 1 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead" 
+		"visibility" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead" 
+		"translate" " -type \"double3\" 1.59734067502036226 -1.07293088475942966 -3.55986867172899579"
+		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead" 
+		"translateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead" 
+		"translateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead" 
+		"translateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead" 
+		"rotate" " -type \"double3\" -28.61296718594165256 0.78174021841600183 1.09056447823678848"
+		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead" 
+		"rotateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead" 
+		"rotateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead" 
+		"rotateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:hair" 
+		"visibility" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:hair" 
+		"translate" " -type \"double3\" 0 15.12482293207280115 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:hair" 
+		"translateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:hair" 
+		"translateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:hair" 
+		"translateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:hair" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:hair" 
+		"scale" " -type \"double3\" 0.85329717515640779 1.19994912038306056 1.19994912038306056"
+		
 		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_left" 
 		"visibility" " 1"
 		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_left" 
 		"translate" " -type \"double3\" 0 0 -0.051182014808643921"
 		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_left" 
+		"translateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_left" 
+		"translateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_left" 
+		"translateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_left" 
 		"rotate" " -type \"double3\" -7.12484477452439169 -11.09212129239806188 0.47642034685829832"
 		
 		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_left" 
 		"scale" " -type \"double3\" 1 1 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_left|YoungerSon_complete_rig:pCylinder1" 
+		"visibility" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_left|YoungerSon_complete_rig:pCylinder1" 
+		"translate" " -type \"double3\" -5.29731755756619371 9.84226619549115966 -18.63901420335818315"
+		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_left|YoungerSon_complete_rig:pCylinder1" 
+		"translateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_left|YoungerSon_complete_rig:pCylinder1" 
+		"translateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_left|YoungerSon_complete_rig:pCylinder1" 
+		"translateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_left|YoungerSon_complete_rig:pCylinder1" 
+		"rotate" " -type \"double3\" 81.25213645323304945 -19.74407887146529461 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_left|YoungerSon_complete_rig:pCylinder1" 
+		"scale" " -type \"double3\" 0.12634782919616713 0.12634782919616713 0.10107826456506459"
+		
 		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_left|YoungerSon_complete_rig:pCylinder1|YoungerSon_complete_rig:transform1" 
 		"visibility" " 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_left|YoungerSon_complete_rig:pCylinder1|YoungerSon_complete_rig:transform1" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_left|YoungerSon_complete_rig:pCylinder1|YoungerSon_complete_rig:transform1" 
+		"translateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_left|YoungerSon_complete_rig:pCylinder1|YoungerSon_complete_rig:transform1" 
+		"translateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_left|YoungerSon_complete_rig:pCylinder1|YoungerSon_complete_rig:transform1" 
+		"translateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_left|YoungerSon_complete_rig:pCylinder1|YoungerSon_complete_rig:transform1" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_left|YoungerSon_complete_rig:pCylinder1|YoungerSon_complete_rig:transform1" 
+		"scale" " -type \"double3\" 1 1 1"
 		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_left|YoungerSon_complete_rig:eye" 
-		"translate" " -type \"double3\" 0.44739195270561538 0.0071171982160801069 -0.087503848914942978"
+		"visibility" " -av 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_left|YoungerSon_complete_rig:eye" 
+		"translate" " -type \"double3\" 0.51407895397856296 0.13266670264685565 -0.023495732708343986"
 		
 		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_left|YoungerSon_complete_rig:eye" 
 		"translateX" " -av"
@@ -394,16 +1274,126 @@ createNode reference -n "YoungerSon_complete_rigRN";
 		"translateY" " -av"
 		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_left|YoungerSon_complete_rig:eye" 
 		"translateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_left|YoungerSon_complete_rig:eye" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_left|YoungerSon_complete_rig:eye" 
+		"rotateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_left|YoungerSon_complete_rig:eye" 
+		"rotateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_left|YoungerSon_complete_rig:eye" 
+		"rotateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_left|YoungerSon_complete_rig:eye" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_left|YoungerSon_complete_rig:eye" 
+		"scaleY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_left|YoungerSon_complete_rig:eye" 
+		"scaleX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_left|YoungerSon_complete_rig:eye" 
+		"scaleZ" " -av"
 		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_left|YoungerSon_complete_rig:eye" 
 		"rotatePivot" " -type \"double3\" -5.96124490820372888 11.1079940115997573 11.84860960066363234"
 		
 		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_left|YoungerSon_complete_rig:eye" 
 		"scalePivot" " -type \"double3\" -5.96124490820372888 11.1079940115997573 11.84860960066363234"
 		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_left|YoungerSon_complete_rig:eye|YoungerSon_complete_rig:pCylinder2" 
+		"visibility" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_left|YoungerSon_complete_rig:eye|YoungerSon_complete_rig:pCylinder2" 
+		"translate" " -type \"double3\" -5.96124478999025786 11.10799383427956499 9.92757099760575201"
+		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_left|YoungerSon_complete_rig:eye|YoungerSon_complete_rig:pCylinder2" 
+		"translateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_left|YoungerSon_complete_rig:eye|YoungerSon_complete_rig:pCylinder2" 
+		"translateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_left|YoungerSon_complete_rig:eye|YoungerSon_complete_rig:pCylinder2" 
+		"translateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_left|YoungerSon_complete_rig:eye|YoungerSon_complete_rig:pCylinder2" 
+		"rotate" " -type \"double3\" 89.99999999999998579 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_left|YoungerSon_complete_rig:eye|YoungerSon_complete_rig:pCylinder2" 
+		"scale" " -type \"double3\" 0.06197790439638462 0.061977904396384627 0.061977904396384613"
+		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_left|YoungerSon_complete_rig:eye|YoungerSon_complete_rig:highlight1" 
+		"visibility" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_left|YoungerSon_complete_rig:eye|YoungerSon_complete_rig:highlight1" 
+		"translate" " -type \"double3\" -6.67446740826237583 12.07864908285090522 11.44584533708349738"
+		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_left|YoungerSon_complete_rig:eye|YoungerSon_complete_rig:highlight1" 
+		"translateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_left|YoungerSon_complete_rig:eye|YoungerSon_complete_rig:highlight1" 
+		"translateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_left|YoungerSon_complete_rig:eye|YoungerSon_complete_rig:highlight1" 
+		"translateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_left|YoungerSon_complete_rig:eye|YoungerSon_complete_rig:highlight1" 
+		"rotate" " -type \"double3\" 89.99999999999998579 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_left|YoungerSon_complete_rig:eye|YoungerSon_complete_rig:highlight1" 
+		"scale" " -type \"double3\" 0.014262348278747599 0.014262348278747599 0.014262348278747599"
+		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_left|YoungerSon_complete_rig:eye|YoungerSon_complete_rig:highlight2" 
+		"visibility" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_left|YoungerSon_complete_rig:eye|YoungerSon_complete_rig:highlight2" 
+		"translate" " -type \"double3\" -5.15877702862888832 10.23144242961777373 11.44584533708349738"
+		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_left|YoungerSon_complete_rig:eye|YoungerSon_complete_rig:highlight2" 
+		"translateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_left|YoungerSon_complete_rig:eye|YoungerSon_complete_rig:highlight2" 
+		"translateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_left|YoungerSon_complete_rig:eye|YoungerSon_complete_rig:highlight2" 
+		"translateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_left|YoungerSon_complete_rig:eye|YoungerSon_complete_rig:highlight2" 
+		"rotate" " -type \"double3\" 89.99999999999998579 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_left|YoungerSon_complete_rig:eye|YoungerSon_complete_rig:highlight2" 
+		"scale" " -type \"double3\" 0.014262348278747599 0.014262348278747599 0.014262348278747599"
+		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_right" 
+		"visibility" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_right" 
+		"translate" " -type \"double3\" -1.99317646039737495 -1.32062915636852596 2.75274508446941546"
+		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_right" 
+		"translateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_right" 
+		"translateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_right" 
+		"translateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_right" 
+		"rotate" " -type \"double3\" -172.87515522547562341 -11.09212129239806188 179.52357965314172361"
+		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_right" 
+		"scale" " -type \"double3\" 1 1 -1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_right|YoungerSon_complete_rig:pCylinder1" 
+		"visibility" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_right|YoungerSon_complete_rig:pCylinder1" 
+		"translate" " -type \"double3\" -5.29731755756619371 9.84226619549115966 -18.63901420335818315"
+		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_right|YoungerSon_complete_rig:pCylinder1" 
+		"translateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_right|YoungerSon_complete_rig:pCylinder1" 
+		"translateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_right|YoungerSon_complete_rig:pCylinder1" 
+		"translateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_right|YoungerSon_complete_rig:pCylinder1" 
+		"rotate" " -type \"double3\" 81.25213645323304945 -19.74407887146529461 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_right|YoungerSon_complete_rig:pCylinder1" 
+		"scale" " -type \"double3\" 0.12634782919616713 0.12634782919616713 0.10107826456506459"
+		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_right|YoungerSon_complete_rig:pCylinder1|YoungerSon_complete_rig:transform2" 
+		"visibility" " 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_right|YoungerSon_complete_rig:pCylinder1|YoungerSon_complete_rig:transform2" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_right|YoungerSon_complete_rig:pCylinder1|YoungerSon_complete_rig:transform2" 
+		"translateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_right|YoungerSon_complete_rig:pCylinder1|YoungerSon_complete_rig:transform2" 
+		"translateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_right|YoungerSon_complete_rig:pCylinder1|YoungerSon_complete_rig:transform2" 
+		"translateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_right|YoungerSon_complete_rig:pCylinder1|YoungerSon_complete_rig:transform2" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_right|YoungerSon_complete_rig:pCylinder1|YoungerSon_complete_rig:transform2" 
+		"scale" " -type \"double3\" 1 1 1"
 		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_right|YoungerSon_complete_rig:eye" 
 		"visibility" " -av 1"
 		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_right|YoungerSon_complete_rig:eye" 
-		"translate" " -type \"double3\" 0.50614218861093596 -0.17059250516716659 0.1984217176737951"
+		"translate" " -type \"double3\" 0.49593234511306794 0.13390577766203243 -0.022970140676942228"
 		
 		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_right|YoungerSon_complete_rig:eye" 
 		"translateX" " -av"
@@ -412,9 +1402,21 @@ createNode reference -n "YoungerSon_complete_rigRN";
 		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_right|YoungerSon_complete_rig:eye" 
 		"translateZ" " -av"
 		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_right|YoungerSon_complete_rig:eye" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_right|YoungerSon_complete_rig:eye" 
+		"rotateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_right|YoungerSon_complete_rig:eye" 
+		"rotateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_right|YoungerSon_complete_rig:eye" 
+		"rotateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_right|YoungerSon_complete_rig:eye" 
 		"scale" " -type \"double3\" 1 1 1"
 		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_right|YoungerSon_complete_rig:eye" 
 		"scaleY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_right|YoungerSon_complete_rig:eye" 
+		"scaleX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_right|YoungerSon_complete_rig:eye" 
+		"scaleZ" " -av"
 		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_right|YoungerSon_complete_rig:eye" 
 		"rotatePivot" " -type \"double3\" -5.96124490820372888 11.10799401159975375 11.87909008613854311"
 		
@@ -422,18 +1424,85 @@ createNode reference -n "YoungerSon_complete_rigRN";
 		"scalePivot" " -type \"double3\" -5.96124490820372888 11.10799401159975375 11.87909008613854311"
 		
 		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_right|YoungerSon_complete_rig:eye|YoungerSon_complete_rig:pCylinder2" 
+		"visibility" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_right|YoungerSon_complete_rig:eye|YoungerSon_complete_rig:pCylinder2" 
+		"translate" " -type \"double3\" -5.96124478999025786 11.10799383427955966 9.92757099760574846"
+		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_right|YoungerSon_complete_rig:eye|YoungerSon_complete_rig:pCylinder2" 
+		"translateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_right|YoungerSon_complete_rig:eye|YoungerSon_complete_rig:pCylinder2" 
+		"translateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_right|YoungerSon_complete_rig:eye|YoungerSon_complete_rig:pCylinder2" 
+		"translateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_right|YoungerSon_complete_rig:eye|YoungerSon_complete_rig:pCylinder2" 
+		"rotate" " -type \"double3\" 89.99999999999998579 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_right|YoungerSon_complete_rig:eye|YoungerSon_complete_rig:pCylinder2" 
 		"scale" " -type \"double3\" 0.06197790439638462 0.06197790439638462 0.06197790439638462"
 		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_right|YoungerSon_complete_rig:eye|YoungerSon_complete_rig:highlight1" 
+		"visibility" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_right|YoungerSon_complete_rig:eye|YoungerSon_complete_rig:highlight1" 
+		"translate" " -type \"double3\" -5.18378490417347848 12.04972369731303594 11.46509105247420557"
+		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_right|YoungerSon_complete_rig:eye|YoungerSon_complete_rig:highlight1" 
+		"translateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_right|YoungerSon_complete_rig:eye|YoungerSon_complete_rig:highlight1" 
+		"translateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_right|YoungerSon_complete_rig:eye|YoungerSon_complete_rig:highlight1" 
+		"translateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_right|YoungerSon_complete_rig:eye|YoungerSon_complete_rig:highlight1" 
+		"rotate" " -type \"double3\" 89.99999999999998579 0 0"
 		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_right|YoungerSon_complete_rig:eye|YoungerSon_complete_rig:highlight1" 
 		"scale" " -type \"double3\" 0.014262348278747597 0.014262348278747597 0.014262348278747597"
 		
 		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_right|YoungerSon_complete_rig:eye|YoungerSon_complete_rig:highlight2" 
+		"visibility" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_right|YoungerSon_complete_rig:eye|YoungerSon_complete_rig:highlight2" 
+		"translate" " -type \"double3\" -6.7305159464033002 10.20263629038869979 11.51297365110244009"
+		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_right|YoungerSon_complete_rig:eye|YoungerSon_complete_rig:highlight2" 
+		"translateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_right|YoungerSon_complete_rig:eye|YoungerSon_complete_rig:highlight2" 
+		"translateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_right|YoungerSon_complete_rig:eye|YoungerSon_complete_rig:highlight2" 
+		"translateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_right|YoungerSon_complete_rig:eye|YoungerSon_complete_rig:highlight2" 
+		"rotate" " -type \"double3\" 89.99999999999998579 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eye_right|YoungerSon_complete_rig:eye|YoungerSon_complete_rig:highlight2" 
 		"scale" " -type \"double3\" 0.014262348278747597 0.014262348278747597 0.014262348278747597"
 		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:mouth" 
+		"visibility" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:mouth" 
+		"translate" " -type \"double3\" 0 2.59165717004810592 11.23103477479996926"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:mouth" 
+		"translateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:mouth" 
+		"translateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:mouth" 
+		"translateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:mouth" 
+		"rotate" " -type \"double3\" 114.96945599369819035 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:mouth" 
+		"scale" " -type \"double3\" 0.0471466888613385 0.0471466888613385 0.047"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:thingsThatMoveWithTheHead_parentConstraint1" 
+		"nodeState" " -k 1 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:thingsThatMoveWithTheHead_parentConstraint1" 
+		"target[0].targetOffsetTranslate" " -type \"double3\" -0.10217295587062834 0.8027947545051255 -0.92172288894653398"
+		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:thingsThatMoveWithTheHead_parentConstraint1" 
+		"target[0].targetOffsetRotate" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:thingsThatMoveWithTheHead_parentConstraint1" 
+		"interpType" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:thingsThatMoveWithTheHead_parentConstraint1" 
+		"rotationDecompositionTarget" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:thingsThatMoveWithTheHead_parentConstraint1" 
+		"neck_handleW0" " -k 1 1"
 		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyebrows" 
 		"visibility" " -av 1"
 		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyebrows" 
-		"translate" " -type \"double3\" 0 0 0"
+		"translate" " -type \"double3\" 0.12900477706305463 0.34776576919331043 0.19265772685735863"
+		
 		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyebrows" 
 		"translateX" " -av"
 		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyebrows" 
@@ -456,12 +1525,143 @@ createNode reference -n "YoungerSon_complete_rigRN";
 		"scaleY" " -av"
 		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyebrows" 
 		"scaleZ" " -av"
-		2 "YoungerSon_complete_rig:blendShapesMouthSon" "w[0:2]" " -s 3 0 1 0"
-		2 "YoungerSon_complete_rig:blendShapesMouthSon" "weight[1]" " -av"
-		2 "YoungerSon_complete_rig:blendShapesEyebrowsSon" "weight[0]" " 0"
-		2 "YoungerSon_complete_rig:blendShapesEyebrowsSon" "weight[0]" " -av"
-		2 "YoungerSon_complete_rig:blendShape_eyes" "w[0:1]" " -s 2 0.011173183999999999 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyes45Deg" 
+		"visibility" " 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyes45Deg" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyes45Deg" 
+		"translateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyes45Deg" 
+		"translateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyes45Deg" 
+		"translateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyes45Deg" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyes45Deg" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyes45Deg|YoungerSon_complete_rig:pupils" 
+		"visibility" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyes45Deg|YoungerSon_complete_rig:pupils" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyes45Deg|YoungerSon_complete_rig:pupils" 
+		"translateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyes45Deg|YoungerSon_complete_rig:pupils" 
+		"translateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyes45Deg|YoungerSon_complete_rig:pupils" 
+		"translateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyes45Deg|YoungerSon_complete_rig:pupils" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyes45Deg|YoungerSon_complete_rig:pupils" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyes45Deg|YoungerSon_complete_rig:pupils|YoungerSon_complete_rig:pCylinder3" 
+		"visibility" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyes45Deg|YoungerSon_complete_rig:pupils|YoungerSon_complete_rig:pCylinder3" 
+		"translate" " -type \"double3\" 6.57256116702508919 10.87030567934470326 9.99927854003356131"
 		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyes45Deg|YoungerSon_complete_rig:pupils|YoungerSon_complete_rig:pCylinder3" 
+		"translateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyes45Deg|YoungerSon_complete_rig:pupils|YoungerSon_complete_rig:pCylinder3" 
+		"translateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyes45Deg|YoungerSon_complete_rig:pupils|YoungerSon_complete_rig:pCylinder3" 
+		"translateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyes45Deg|YoungerSon_complete_rig:pupils|YoungerSon_complete_rig:pCylinder3" 
+		"rotate" " -type \"double3\" 97.37230699265937517 -35.95493802494520708 179.42243972347986869"
+		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyes45Deg|YoungerSon_complete_rig:pupils|YoungerSon_complete_rig:pCylinder3" 
+		"scale" " -type \"double3\" 0.061977904396384599 0.061977904396384606 -0.06197790439638462"
+		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyes45Deg|YoungerSon_complete_rig:pupils|YoungerSon_complete_rig:highlight3" 
+		"visibility" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyes45Deg|YoungerSon_complete_rig:pupils|YoungerSon_complete_rig:highlight3" 
+		"translate" " -type \"double3\" 7.64584892108586178 10.15963040386330363 11.50524866519744549"
+		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyes45Deg|YoungerSon_complete_rig:pupils|YoungerSon_complete_rig:highlight3" 
+		"translateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyes45Deg|YoungerSon_complete_rig:pupils|YoungerSon_complete_rig:highlight3" 
+		"translateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyes45Deg|YoungerSon_complete_rig:pupils|YoungerSon_complete_rig:highlight3" 
+		"translateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyes45Deg|YoungerSon_complete_rig:pupils|YoungerSon_complete_rig:highlight3" 
+		"rotate" " -type \"double3\" 97.37230699265950307 -35.95493802494506497 179.422439723479755"
+		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyes45Deg|YoungerSon_complete_rig:pupils|YoungerSon_complete_rig:highlight3" 
+		"scale" " -type \"double3\" 0.01406000762383486 0.014060007623834862 -0.014060007623834865"
+		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyes45Deg|YoungerSon_complete_rig:pupils|YoungerSon_complete_rig:highlight4" 
+		"visibility" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyes45Deg|YoungerSon_complete_rig:pupils|YoungerSon_complete_rig:highlight4" 
+		"translate" " -type \"double3\" 6.09004079693183709 11.99951625916459896 11.53137660705599288"
+		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyes45Deg|YoungerSon_complete_rig:pupils|YoungerSon_complete_rig:highlight4" 
+		"translateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyes45Deg|YoungerSon_complete_rig:pupils|YoungerSon_complete_rig:highlight4" 
+		"translateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyes45Deg|YoungerSon_complete_rig:pupils|YoungerSon_complete_rig:highlight4" 
+		"translateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyes45Deg|YoungerSon_complete_rig:pupils|YoungerSon_complete_rig:highlight4" 
+		"rotate" " -type \"double3\" 97.37230699265950307 -35.95493802494506497 179.422439723479755"
+		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyes45Deg|YoungerSon_complete_rig:pupils|YoungerSon_complete_rig:highlight4" 
+		"scale" " -type \"double3\" 0.01406000762383486 0.014060007623834862 -0.014060007623834865"
+		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyes45Deg|YoungerSon_complete_rig:pupils|YoungerSon_complete_rig:pCylinder4" 
+		"visibility" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyes45Deg|YoungerSon_complete_rig:pupils|YoungerSon_complete_rig:pCylinder4" 
+		"translate" " -type \"double3\" -3.25954199418759583 11.83397417826861897 10.60973554704585631"
+		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyes45Deg|YoungerSon_complete_rig:pupils|YoungerSon_complete_rig:pCylinder4" 
+		"translateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyes45Deg|YoungerSon_complete_rig:pupils|YoungerSon_complete_rig:pCylinder4" 
+		"translateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyes45Deg|YoungerSon_complete_rig:pupils|YoungerSon_complete_rig:pCylinder4" 
+		"translateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyes45Deg|YoungerSon_complete_rig:pupils|YoungerSon_complete_rig:pCylinder4" 
+		"rotate" " -type \"double3\" 82.87515522547593605 -11.09212129239801037 -5.44877427538537606"
+		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyes45Deg|YoungerSon_complete_rig:pupils|YoungerSon_complete_rig:pCylinder4" 
+		"scale" " -type \"double3\" 0.06197790439638462 0.061977904396384627 0.06197790439638462"
+		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyes45Deg|YoungerSon_complete_rig:pupils|YoungerSon_complete_rig:highlight5" 
+		"visibility" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyes45Deg|YoungerSon_complete_rig:pupils|YoungerSon_complete_rig:highlight5" 
+		"translate" " -type \"double3\" -2.77717224498020743 11.156493016903136 12.34921608559751149"
+		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyes45Deg|YoungerSon_complete_rig:pupils|YoungerSon_complete_rig:highlight5" 
+		"translateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyes45Deg|YoungerSon_complete_rig:pupils|YoungerSon_complete_rig:highlight5" 
+		"translateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyes45Deg|YoungerSon_complete_rig:pupils|YoungerSon_complete_rig:highlight5" 
+		"translateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyes45Deg|YoungerSon_complete_rig:pupils|YoungerSon_complete_rig:highlight5" 
+		"rotate" " -type \"double3\" 82.87515522547593605 -11.09212129239801037 -5.44877427538537606"
+		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyes45Deg|YoungerSon_complete_rig:pupils|YoungerSon_complete_rig:highlight5" 
+		"scale" " -type \"double3\" 0.014262348278747597 0.014262348278747599 0.014262348278747599"
+		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyes45Deg|YoungerSon_complete_rig:pupils|YoungerSon_complete_rig:highlight6" 
+		"visibility" " 1"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyes45Deg|YoungerSon_complete_rig:pupils|YoungerSon_complete_rig:highlight6" 
+		"translate" " -type \"double3\" -4.23566101311727738 12.97737160142533774 11.83278463776663969"
+		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyes45Deg|YoungerSon_complete_rig:pupils|YoungerSon_complete_rig:highlight6" 
+		"translateX" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyes45Deg|YoungerSon_complete_rig:pupils|YoungerSon_complete_rig:highlight6" 
+		"translateY" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyes45Deg|YoungerSon_complete_rig:pupils|YoungerSon_complete_rig:highlight6" 
+		"translateZ" " -av"
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyes45Deg|YoungerSon_complete_rig:pupils|YoungerSon_complete_rig:highlight6" 
+		"rotate" " -type \"double3\" 82.87515522547593605 -11.09212129239801037 -5.44877427538537606"
+		
+		2 "|YoungerSon_complete_rig:Master_Handle|YoungerSon_complete_rig:thingsThatMoveWithTheHead|YoungerSon_complete_rig:eyes45Deg|YoungerSon_complete_rig:pupils|YoungerSon_complete_rig:highlight6" 
+		"scale" " -type \"double3\" 0.014262348278747597 0.014262348278747599 0.014262348278747599"
+		
+		2 "YoungerSon_complete_rig:blendShapesMouthSon" "w[0:2]" " -s 3 0 0.95530725000000005 0"
+		
+		2 "YoungerSon_complete_rig:blendShapesMouthSon" "weight[1]" " -av"
+		2 "YoungerSon_complete_rig:blendShapesEyebrowsSon" "weight[0]" " 0.59776538999999995"
+		
+		2 "YoungerSon_complete_rig:blendShapesEyebrowsSon" "weight[0]" " -av"
+		2 "YoungerSon_complete_rig:blendShape_eyes" "w[0:1]" " -s 2 0 0"
 		2 "YoungerSon_complete_rig:blendShape_eyes" "weight" " -s 2"
 		2 "YoungerSon_complete_rig:blendShape_eyes" "weight[0]" " -av"
 		2 "YoungerSon_complete_rig:blendShape_eyes" "weight[1]" " -av"
@@ -850,7 +2050,12 @@ createNode reference -n "presentDay_scene_latestRN";
 		"presentDay_scene_latest:newtableRN" 0
 		"presentDay_scene_latest:doorRN" 0
 		"presentDay_scene_latest:windowRN" 0
-		"presentDay_scene_latestRN" 1
+		"presentDay_scene_latest:newtableRN" 1
+		2 "|presentDay_scene_latest:newtable:newTable" "translate" " -type \"double3\" -2.54913867574231912 0.73669625942438688 2.12578346934237583"
+		
+		"presentDay_scene_latestRN" 2
+		2 "|presentDay_scene_latest:group3" "translate" " -type \"double3\" -3.3169512542432984 0 9.53116486402356244"
+		
 		2 "|presentDay_scene_latest:group3|presentDay_scene_latest:door1:pCube4" 
 		"visibility" " 1";
 	setAttr ".ptag" -type "string" "";
@@ -963,209 +2168,221 @@ createNode animCurveTU -n "chest_handle_visibility";
 	rename -uid "50F1BB31-554E-5345-59A5-429C92B5BBDC";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 1 13 1 21 1;
-	setAttr -s 3 ".kot[0:2]"  5 5 5;
+	setAttr -s 7 ".ktv[0:6]"  1 1 13 1 21 1 48 1 52 1 64 1 72 1;
+	setAttr -s 7 ".kot[0:6]"  5 5 5 5 5 5 5;
 createNode animCurveTL -n "chest_handle_translateX";
 	rename -uid "09955274-5640-BAAB-972B-A5A8BD074DC1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 13 0 21 0;
+	setAttr -s 7 ".ktv[0:6]"  1 0 13 0 21 0 48 0 52 0 64 0 72 0;
 createNode animCurveTL -n "chest_handle_translateY";
 	rename -uid "03BBAFB3-8B47-692F-7D11-04A2DCD24241";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 13 0 21 0;
+	setAttr -s 7 ".ktv[0:6]"  1 0 13 0 21 0 48 0 52 0 64 0 72 0;
 createNode animCurveTL -n "chest_handle_translateZ";
 	rename -uid "17BA1F15-B24B-93BE-3FDD-C68CCD7457CA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 13 0 21 0;
+	setAttr -s 7 ".ktv[0:6]"  1 0 13 0 21 0 48 0 52 0 64 0 72 0;
 createNode animCurveTA -n "chest_handle_rotateX";
 	rename -uid "80E8E622-0840-BFA7-D555-64A74EF1B6CB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 13 0 21 0;
+	setAttr -s 7 ".ktv[0:6]"  1 0 13 0 21 0 48 0 52 0 64 -0.74797647695356395
+		 72 -1.3309734920211349;
 createNode animCurveTA -n "chest_handle_rotateY";
 	rename -uid "7E59AF89-6946-1624-34D9-0AB1B60E8A4A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 13 0 21 0;
+	setAttr -s 7 ".ktv[0:6]"  1 0 13 0 21 0 48 0 52 0 64 7.7650260777917871e-19
+		 72 0;
 createNode animCurveTA -n "chest_handle_rotateZ";
 	rename -uid "EACDDC46-BA4E-69BC-8663-3B9E6D811926";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 13 0 21 2.0711900805636492;
+	setAttr -s 7 ".ktv[0:6]"  1 0 13 0 21 2.0711900805636492 48 2.0711900805636492
+		 52 -0.86638788095261621 64 -0.86638788095261532 72 -0.86638788095261499;
 createNode animCurveTU -n "chest_handle_scaleX";
 	rename -uid "A9CF5F00-6941-3B96-A687-E3988E00C4E8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 1 13 1 21 1;
+	setAttr -s 7 ".ktv[0:6]"  1 1 13 1 21 1 48 1 52 1 64 1 72 1;
 createNode animCurveTU -n "chest_handle_scaleY";
 	rename -uid "39B5A89D-FA44-4FA4-25D1-EF8EE547E6E0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 1 13 1 21 1;
+	setAttr -s 7 ".ktv[0:6]"  1 1 13 1 21 1 48 1 52 1 64 1 72 1;
 createNode animCurveTU -n "chest_handle_scaleZ";
 	rename -uid "6DC06AAA-EA4F-C049-283D-AB900F53F239";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 1 13 1 21 1;
+	setAttr -s 7 ".ktv[0:6]"  1 1 13 1 21 1 48 1 52 1 64 1 72 1;
 createNode animCurveTU -n "back_handle_visibility";
 	rename -uid "959FF667-2242-1211-DF54-9783E9B6B093";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 1 16 1 24 1;
-	setAttr -s 3 ".kot[0:2]"  5 5 5;
+	setAttr -s 7 ".ktv[0:6]"  1 1 16 1 24 1 48 1 50 1 52 1 65 1;
+	setAttr -s 7 ".kot[0:6]"  5 5 5 5 5 5 5;
 createNode animCurveTL -n "back_handle_translateX";
 	rename -uid "6BCA9E9B-5F42-B226-D9CD-E69BFC57716C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 16 0 24 0;
+	setAttr -s 7 ".ktv[0:6]"  1 0 16 0 24 0 48 0 50 0 52 0 65 0;
 createNode animCurveTL -n "back_handle_translateY";
 	rename -uid "78401C80-494C-5E45-98FB-86BDE3B4E500";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 16 0 24 0;
+	setAttr -s 7 ".ktv[0:6]"  1 0 16 0 24 0 48 0 50 0 52 0 65 0;
 createNode animCurveTL -n "back_handle_translateZ";
 	rename -uid "E1AE89E3-9541-E190-2A9D-6F9C0FA33C33";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 16 0 24 0;
+	setAttr -s 7 ".ktv[0:6]"  1 0 16 0 24 0 48 0 50 0 52 0 65 0;
 createNode animCurveTA -n "back_handle_rotateX";
 	rename -uid "8300FD4B-054B-1164-C00D-2D917DCE17C8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 -10.945957083187681 16 -11.229000369574546
-		 24 -12.072802241675346;
+	setAttr -s 7 ".ktv[0:6]"  1 -10.945957083187681 16 -11.229000369574546
+		 24 -12.072802241675346 48 -12.072802241675346 50 -12.072802241675346 52 -12.069977009695414
+		 65 -12.573082453849745;
 createNode animCurveTA -n "back_handle_rotateY";
 	rename -uid "C3FEEBD8-0B46-F746-6BE4-3C8C3C5AFE60";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 16 0 24 -0.27914132559960808;
+	setAttr -s 7 ".ktv[0:6]"  1 0 16 0 24 -0.27914132559960808 48 -0.27914132559960808
+		 50 -0.27914132559960808 52 -0.38360854502604413 65 -0.3836085450260438;
 createNode animCurveTA -n "back_handle_rotateZ";
 	rename -uid "C24FA58E-6F40-9BBB-FFDA-CA956B0C64FF";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 16 0 24 1.4955286772312104;
+	setAttr -s 7 ".ktv[0:6]"  1 0 16 0 24 1.4955286772312104 48 1.4955286772312104
+		 50 1.4955286772312104 52 1.0070375271340166 65 1.007037527134016;
 createNode animCurveTU -n "back_handle_scaleX";
 	rename -uid "29E01A19-AD44-7BF3-8CDF-0F8C8098F443";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 1 16 1 24 1;
+	setAttr -s 7 ".ktv[0:6]"  1 1 16 1 24 1 48 1 50 1 52 1 65 1;
 createNode animCurveTU -n "back_handle_scaleY";
 	rename -uid "3DF2BE13-7E42-CE8C-6569-C69F33ACE35B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 1 16 1 24 1;
+	setAttr -s 7 ".ktv[0:6]"  1 1 16 1 24 1 48 1 50 1 52 1 65 1;
 createNode animCurveTU -n "back_handle_scaleZ";
 	rename -uid "BB5B391D-5941-E267-8CE0-58B1024CEF07";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 1 16 1 24 1;
+	setAttr -s 7 ".ktv[0:6]"  1 1 16 1 24 1 48 1 50 1 52 1 65 1;
 createNode animCurveTU -n "COG_handle_visibility";
 	rename -uid "1457F849-BC4A-B2AF-41BE-6B91E93E9479";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 1 11 1 20 1 30 1;
-	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
+	setAttr -s 7 ".ktv[0:6]"  1 1 11 1 20 1 30 1 48 1 50 1 52 1;
+	setAttr -s 7 ".kot[0:6]"  5 5 5 5 5 5 5;
 createNode animCurveTL -n "COG_handle_translateX";
 	rename -uid "67659255-8041-BD90-5B86-EE824FB193CB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 11 0 20 0 30 0;
+	setAttr -s 7 ".ktv[0:6]"  1 0 11 0 20 0 30 0 48 0 50 0 52 0;
 createNode animCurveTL -n "COG_handle_translateY";
 	rename -uid "8C5A1EBE-214B-97D4-099D-6CB8680B0685";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 11 0 20 0 30 0;
+	setAttr -s 7 ".ktv[0:6]"  1 0 11 0 20 0 30 0 48 0 50 0 52 0;
 createNode animCurveTL -n "COG_handle_translateZ";
 	rename -uid "DF4C9F3F-E147-B6D5-49FE-B7A49994B28E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 11 0 20 0 30 0;
+	setAttr -s 7 ".ktv[0:6]"  1 0 11 0 20 0 30 0 48 0 50 0 52 0;
 createNode animCurveTA -n "COG_handle_rotateX";
 	rename -uid "65891470-584F-86DD-B94C-98A7406F30B1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 -2.7886090381550503 11 -2.7886090381550503
-		 20 -4.0960144933960736 30 -4.0958689588004766;
+	setAttr -s 7 ".ktv[0:6]"  1 -2.7886090381550503 11 -2.7886090381550503
+		 20 -4.0960144933960736 30 -4.0958689588004766 48 -4.0958689588004766 50 -4.0958689588004766
+		 52 -4.0723623114222773;
 createNode animCurveTA -n "COG_handle_rotateY";
 	rename -uid "2DC869FE-204F-BD16-9A83-DD8545D78B1E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 11 0 20 0 30 0.034557740736248899;
+	setAttr -s 7 ".ktv[0:6]"  1 0 11 0 20 0 30 0.034557740736248899 48 0.034557740736248899
+		 50 0.034557740736248899 52 -0.43991582322822825;
 createNode animCurveTA -n "COG_handle_rotateZ";
 	rename -uid "E5D1D58E-C440-BD02-8A15-6BA1F317B5B8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 11 0 20 0 30 0.48258181091351893;
+	setAttr -s 7 ".ktv[0:6]"  1 0 11 0 20 0 30 0.48258181091351893 48 0.48258181091351893
+		 50 0.48258181091351893 52 -6.1550868390178488;
 createNode animCurveTU -n "COG_handle_scaleX";
 	rename -uid "8E5AADE0-3A46-E0F9-E748-A881D252B39B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 1 11 1 20 1 30 1;
+	setAttr -s 7 ".ktv[0:6]"  1 1 11 1 20 1 30 1 48 1 50 1 52 1;
 createNode animCurveTU -n "COG_handle_scaleY";
 	rename -uid "221D42D7-9A4E-7526-A1EF-8CA497AEF800";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 1 11 1 20 1 30 1;
+	setAttr -s 7 ".ktv[0:6]"  1 1 11 1 20 1 30 1 48 1 50 1 52 1;
 createNode animCurveTU -n "COG_handle_scaleZ";
 	rename -uid "28CD6E84-6F42-48CE-B6AE-638AADF80863";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 1 11 1 20 1 30 1;
+	setAttr -s 7 ".ktv[0:6]"  1 1 11 1 20 1 30 1 48 1 50 1 52 1;
 createNode animCurveTA -n "neck_handle_rotateX";
 	rename -uid "4ABA0960-6E49-F9DE-6A46-5BA494690EEA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 -10.611037137442088 14 -10.887709135769235
-		 26 -8.421095512195361;
+	setAttr -s 7 ".ktv[0:6]"  1 -10.611037137442088 14 -10.887709135769235
+		 26 -8.421095512195361 48 -8.421095512195361 50 -8.421095512195361 52 -9.8807036044123606
+		 64 -10.658969154910707;
 createNode animCurveTA -n "neck_handle_rotateY";
 	rename -uid "1BEB2F0B-7948-7400-2621-DF92CC1D84B2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 14 0 26 0.0075161153452233528;
+	setAttr -s 7 ".ktv[0:6]"  1 0 14 0 26 0.0075161153452233528 48 0.0075161153452233528
+		 50 0.0075161153452233528 52 -0.48109871944140065 64 -0.48109871944140153;
 createNode animCurveTA -n "neck_handle_rotateZ";
 	rename -uid "8BA38DE4-5848-42FF-098D-B7827269BD19";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 14 0 26 10.551816392992114;
+	setAttr -s 7 ".ktv[0:6]"  1 0 14 0 26 10.551816392992114 48 10.551816392992114
+		 50 10.551816392992114 52 7.2495123058336048 64 7.2495123058336048;
 createNode animCurveTU -n "neck_handle_visibility";
 	rename -uid "9E91E6FD-F748-67EE-9E19-B2AADD1DDC18";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 1 14 1 26 1;
-	setAttr -s 3 ".kot[0:2]"  5 5 5;
+	setAttr -s 7 ".ktv[0:6]"  1 1 14 1 26 1 48 1 50 1 52 1 64 1;
+	setAttr -s 7 ".kot[0:6]"  5 5 5 5 5 5 5;
 createNode animCurveTL -n "neck_handle_translateX";
 	rename -uid "C61E1C2C-7D41-B33E-49B6-64B2637F1D9E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 14 0 26 0;
+	setAttr -s 7 ".ktv[0:6]"  1 0 14 0 26 0 48 0 50 0 52 0 64 0;
 createNode animCurveTL -n "neck_handle_translateY";
 	rename -uid "D60BAC72-2344-481A-ED05-27BC31295A45";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 14 0 26 0;
+	setAttr -s 7 ".ktv[0:6]"  1 0 14 0 26 0 48 0 50 0 52 0 64 0;
 createNode animCurveTL -n "neck_handle_translateZ";
 	rename -uid "1861BD1D-6040-3F11-CCE9-5DA4974EADEC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 14 0 26 0;
+	setAttr -s 7 ".ktv[0:6]"  1 0 14 0 26 0 48 0 50 0 52 0 64 0;
 createNode animCurveTU -n "neck_handle_scaleX";
 	rename -uid "B46AF76E-A141-0F58-FC6B-8D81E0ED072C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 1 14 1 26 1;
+	setAttr -s 7 ".ktv[0:6]"  1 1 14 1 26 1 48 1 50 1 52 1 64 1;
 createNode animCurveTU -n "neck_handle_scaleY";
 	rename -uid "52153499-F341-3E4B-9699-6891A1C62B3B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 1 14 1 26 1;
+	setAttr -s 7 ".ktv[0:6]"  1 1 14 1 26 1 48 1 50 1 52 1 64 1;
 createNode animCurveTU -n "neck_handle_scaleZ";
 	rename -uid "31DD67C2-0B4D-59FA-9C33-9A9A87E7EE72";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 1 14 1 26 1;
+	setAttr -s 7 ".ktv[0:6]"  1 1 14 1 26 1 48 1 50 1 52 1 64 1;
 createNode animCurveTU -n "blendShapesMouthSon_sadTalkClosed";
 	rename -uid "096F0BDD-B644-9C80-630B-58A962AE747B";
 	setAttr ".tan" 18;
@@ -1175,61 +2392,62 @@ createNode animCurveTL -n "eyebrows_translateX";
 	rename -uid "16FF981B-1049-4042-BA3A-04BAA89C01A7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 -1.3877787807814452e-17 10 -1.3877787807814452e-17
-		 20 0.0099228678968178059 25 0.12355440693903361;
+	setAttr -s 6 ".ktv[0:5]"  1 -1.3877787807814452e-17 10 -1.3877787807814452e-17
+		 20 0.0099228678968178059 25 0.12355440693903361 52 0.12355440693903361 68 0.12900477706305463;
 createNode animCurveTL -n "eyebrows_translateY";
 	rename -uid "349D7D30-FA43-039F-A75C-B0A694EC7D47";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 -3.3306690738754696e-16 10 -3.3306690738754696e-16
-		 20 -0.63253880964646281 25 0.099094472442661716;
+	setAttr -s 6 ".ktv[0:5]"  1 -3.3306690738754696e-16 10 -3.3306690738754696e-16
+		 20 -0.63253880964646281 25 0.099094472442661716 52 0.099094472442661716 68 0.34776576919331043;
 createNode animCurveTL -n "eyebrows_translateZ";
 	rename -uid "199E89F1-FB47-35E6-0D5C-66A6AB30CC41";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 -1.1102230246251562e-16 10 -1.1102230246251562e-16
-		 20 -0.29482058909231645 25 0.06016862710690038;
+	setAttr -s 6 ".ktv[0:5]"  1 -1.1102230246251562e-16 10 -1.1102230246251562e-16
+		 20 -0.29482058909231645 25 0.06016862710690038 52 0.06016862710690038 68 0.19265772685735863;
 createNode animCurveTU -n "eyebrows_visibility";
 	rename -uid "87EF1EFD-2943-1051-B0FE-809D598F8DE7";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 1 10 1 20 1 25 1;
-	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
+	setAttr -s 6 ".ktv[0:5]"  1 1 10 1 20 1 25 1 52 1 68 1;
+	setAttr -s 6 ".kot[0:5]"  5 5 5 5 5 5;
 createNode animCurveTA -n "eyebrows_rotateX";
 	rename -uid "492DDBE7-7940-1356-AD10-4783ABDCF7F1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 10 0 20 0 25 0;
+	setAttr -s 6 ".ktv[0:5]"  1 0 10 0 20 0 25 0 52 0 68 0;
 createNode animCurveTA -n "eyebrows_rotateY";
 	rename -uid "95B30D1E-FF4E-CAC6-E217-48825BB9768D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 10 0 20 0 25 0;
+	setAttr -s 6 ".ktv[0:5]"  1 0 10 0 20 0 25 0 52 0 68 0;
 createNode animCurveTA -n "eyebrows_rotateZ";
 	rename -uid "1ADFD1F0-A042-26BF-9BFA-37A65CA9E6F0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 10 0 20 0 25 0;
+	setAttr -s 6 ".ktv[0:5]"  1 0 10 0 20 0 25 0 52 0 68 0;
 createNode animCurveTU -n "eyebrows_scaleX";
 	rename -uid "78C16B08-D248-35CE-F6C2-1C9C75997AD2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 1 10 1 20 1 25 1;
+	setAttr -s 6 ".ktv[0:5]"  1 1 10 1 20 1 25 1 52 1 68 1;
 createNode animCurveTU -n "eyebrows_scaleY";
 	rename -uid "C34FA47D-3A4B-882D-6A60-1AA42B77CC55";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 1 10 1 20 1 25 1;
+	setAttr -s 6 ".ktv[0:5]"  1 1 10 1 20 1 25 1 52 1 68 1;
 createNode animCurveTU -n "eyebrows_scaleZ";
 	rename -uid "1DB7824D-564F-2DAD-4B17-65B9B01E5254";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 1 10 1 20 1 25 1;
+	setAttr -s 6 ".ktv[0:5]"  1 1 10 1 20 1 25 1 52 1 68 1;
 createNode animCurveTU -n "blendShapesEyebrowsSon_sad";
 	rename -uid "E7D4BA45-6F49-3B8B-A5F5-CA8FAFCB467D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 10 0 17 0.28491619229316711 20 0.26815643906593323;
+	setAttr -s 6 ".ktv[0:5]"  1 0 10 0 17 0.28491619229316711 20 0.26815643906593323
+		 53 0.26815643906593323 65 0.59776538610458374;
 createNode animCurveTU -n "blendShape_eyes_blink";
 	rename -uid "CEFDD8A4-614B-8EE5-F3A0-B3B7D89C21A1";
 	setAttr ".tan" 18;
@@ -1245,257 +2463,280 @@ createNode animCurveTL -n "eye_translateX";
 	rename -uid "B8A0F8AD-A942-3D10-B92F-78B19D39E129";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  1 0.44739195270561538 5 0.33406983270414575
+	setAttr -s 14 ".ktv[0:13]"  1 0.44739195270561538 5 0.33406983270414575
 		 9 0.35585241344319724 12 0.33368127270607473 16 0.38964515918786358 17 0.36545181670387006
 		 19 0.36545181670387006 21 0.24739844250570228 23 0.32232767876635637 27 0.42936216545813011
-		 32 0.38823414133863088;
-	setAttr -s 11 ".kit[7:10]"  1 18 18 18;
-	setAttr -s 11 ".kot[3:10]"  1 18 18 18 18 18 18 18;
-	setAttr -s 11 ".kix[7:10]"  1 0.80851213130909227 1 1;
-	setAttr -s 11 ".kiy[7:10]"  0 0.58847950986081854 0 0;
-	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 0.80851213130909227 1 1;
-	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0.58847950986081843 0 0;
+		 32 0.38823414133863088 56 0.53626807219899852 62 0.55553478331154005 73.360544217687078 0.51407895397856296;
+	setAttr -s 14 ".kit[7:13]"  1 18 18 18 18 18 18;
+	setAttr -s 14 ".kot[3:13]"  1 18 18 18 18 18 18 18 
+		1 18 18;
+	setAttr -s 14 ".kix[7:13]"  1 0.80851213130909227 1 1 0.99116192202619147 
+		1 1;
+	setAttr -s 14 ".kiy[7:13]"  0 0.58847950986081854 0 0 0.1326576206832675 
+		0 0;
+	setAttr -s 14 ".kox[3:13]"  1 1 1 1 1 0.80851213130909227 1 1 1 1 1;
+	setAttr -s 14 ".koy[3:13]"  0 0 0 0 0 0.58847950986081843 0 0 0 0 0;
 createNode animCurveTL -n "eye_translateY";
 	rename -uid "A4360B16-EC45-9BBD-3BD1-7E99BB708D7D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  1 0.0071171982160801069 5 0.0053144478862224287
+	setAttr -s 14 ".ktv[0:13]"  1 0.0071171982160801069 5 0.0053144478862224287
 		 9 0.21742845399314059 12 0.0033477560653975835 16 -1.1185102563082183 17 -0.97497291481902126
 		 19 -0.97497291481902126 21 -0.14997600850046103 23 0.062152658875868509 27 0.036910223232111364
-		 32 -0.067411692018514782;
-	setAttr -s 11 ".kit[7:10]"  1 18 18 18;
-	setAttr -s 11 ".kot[3:10]"  1 18 18 18 18 18 18 18;
-	setAttr -s 11 ".kix[7:10]"  1 1 0.94517550548873408 1;
-	setAttr -s 11 ".kiy[7:10]"  0 0 -0.32656280226644929 0;
-	setAttr -s 11 ".kox[3:10]"  0.21329910110459099 1 1 1 0.15866489048265514 
-		1 0.94517550548873408 1;
-	setAttr -s 11 ".koy[3:10]"  -0.97698694641636508 0 0 0 0.98733249340236295 
-		0 -0.32656280226644924 0;
+		 32 -0.067411692018514782 56 -0.26329140800431916 62 0.045888879748581052 73.360544217687078 0.13266670264685565;
+	setAttr -s 14 ".kit[7:13]"  1 18 18 18 18 18 18;
+	setAttr -s 14 ".kot[3:13]"  1 18 18 18 18 18 18 18 
+		1 18 18;
+	setAttr -s 14 ".kix[7:13]"  1 1 0.94517550548873408 0.9704970636321999 
+		1 0.87718076136078815 1;
+	setAttr -s 14 ".kiy[7:13]"  0 0 -0.32656280226644929 -0.24111293926556049 
+		0 0.48016029812814354 0;
+	setAttr -s 14 ".kox[3:13]"  0.21329910110459099 1 1 1 0.15866489048265514 
+		1 0.94517550548873408 0.97049706363219979 1 0.87718076136078837 1;
+	setAttr -s 14 ".koy[3:13]"  -0.97698694641636508 0 0 0 0.98733249340236295 
+		0 -0.32656280226644924 -0.24111293926556049 0 0.48016029812814359 0;
 createNode animCurveTL -n "eye_translateZ";
 	rename -uid "8F107496-5C49-3CB8-2106-B3A3AD21DEDA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  1 -0.087503848914942978 5 -0.065339566327013987
+	setAttr -s 14 ".ktv[0:13]"  1 -0.087503848914942978 5 -0.065339566327013987
 		 9 0.06328344737175548 12 -0.067486168495127077 16 -0.059736077114840358 17 -0.14107401738944747
 		 19 -0.14107401738944747 21 0.41564918346318125 23 0.53712452249700082 27 0.50723164800129994
-		 32 0.44893766023052067;
-	setAttr -s 11 ".kit[7:10]"  1 18 18 18;
-	setAttr -s 11 ".kot[3:10]"  1 18 18 18 18 18 18 18;
-	setAttr -s 11 ".kix[7:10]"  1 1 0.97344519086871084 1;
-	setAttr -s 11 ".kiy[7:10]"  0 0 -0.22892020525628401 0;
-	setAttr -s 11 ".kox[3:10]"  1 1 1 1 0.23864841426968075 1 0.97344519086871073 
-		1;
-	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0.97110603662348172 0 -0.22892020525628398 
-		0;
+		 32 0.44893766023052067 56 0.31947319511979722 62 0.047599299925698814 73.360544217687078 -0.023495732708343986;
+	setAttr -s 14 ".kit[7:13]"  1 18 18 18 18 18 18;
+	setAttr -s 14 ".kot[3:13]"  1 18 18 18 18 18 18 18 
+		1 18 18;
+	setAttr -s 14 ".kix[7:13]"  1 1 0.97344519086871084 0.98814185636005369 
+		0.95212778186296865 0.91172326098196022 1;
+	setAttr -s 14 ".kiy[7:13]"  0 0 -0.22892020525628401 -0.1535437126987198 
+		-0.30570032221884069 -0.41080493592996242 0;
+	setAttr -s 14 ".kox[3:13]"  1 1 1 1 0.23864841426968075 1 0.97344519086871073 
+		0.98814185636005358 1 0.91172326098196022 1;
+	setAttr -s 14 ".koy[3:13]"  0 0 0 0 0.97110603662348172 0 -0.22892020525628398 
+		-0.15354371269871978 0 -0.41080493592996253 0;
 createNode animCurveTU -n "eye_visibility";
 	rename -uid "ACAAE6B4-B540-09FA-A7DC-A3B2755013FF";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  1 1 5 1 9 1 12 1 16 1 17 0 19 1 21 1 23 1
-		 27 1 32 1;
-	setAttr -s 11 ".kit[0:10]"  9 9 9 9 9 9 9 1 
-		9 9 9;
-	setAttr -s 11 ".kix[7:10]"  1 1 1 1;
-	setAttr -s 11 ".kiy[7:10]"  0 0 0 0;
+	setAttr -s 14 ".ktv[0:13]"  1 1 5 1 9 1 12 1 16 1 17 0 19 1 21 1 23 1
+		 27 1 32 1 56 1 62 1 73.360544217687078 1;
+	setAttr -s 14 ".kit[0:13]"  9 9 9 9 9 9 9 1 
+		9 9 9 9 9 9;
+	setAttr -s 14 ".kix[7:13]"  1 1 1 1 1 1 1;
+	setAttr -s 14 ".kiy[7:13]"  0 0 0 0 0 0 0;
 createNode animCurveTA -n "eye_rotateX";
 	rename -uid "E7A1EE00-2B45-C7BA-8514-54A977593E5A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  1 0 5 0 9 0 12 0 16 0 17 0 19 0 21 0 23 0
-		 27 0 32 0;
-	setAttr -s 11 ".kit[7:10]"  1 18 18 18;
-	setAttr -s 11 ".kot[3:10]"  1 18 18 18 18 18 18 18;
-	setAttr -s 11 ".kix[7:10]"  1 1 1 1;
-	setAttr -s 11 ".kiy[7:10]"  0 0 0 0;
-	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
-	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 14 ".ktv[0:13]"  1 0 5 0 9 0 12 0 16 0 17 0 19 0 21 0 23 0
+		 27 0 32 0 56 0 62 0 73.360544217687078 0;
+	setAttr -s 14 ".kit[7:13]"  1 18 18 18 18 18 18;
+	setAttr -s 14 ".kot[3:13]"  1 18 18 18 18 18 18 18 
+		1 18 18;
+	setAttr -s 14 ".kix[7:13]"  1 1 1 1 1 1 1;
+	setAttr -s 14 ".kiy[7:13]"  0 0 0 0 0 0 0;
+	setAttr -s 14 ".kox[3:13]"  1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 14 ".koy[3:13]"  0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "eye_rotateY";
 	rename -uid "E6865DF7-F043-4A39-7ACD-E194B548F685";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  1 0 5 0 9 0 12 0 16 0 17 0 19 0 21 0 23 0
-		 27 0 32 0;
-	setAttr -s 11 ".kit[7:10]"  1 18 18 18;
-	setAttr -s 11 ".kot[3:10]"  1 18 18 18 18 18 18 18;
-	setAttr -s 11 ".kix[7:10]"  1 1 1 1;
-	setAttr -s 11 ".kiy[7:10]"  0 0 0 0;
-	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
-	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 14 ".ktv[0:13]"  1 0 5 0 9 0 12 0 16 0 17 0 19 0 21 0 23 0
+		 27 0 32 0 56 0 62 0 73.360544217687078 0;
+	setAttr -s 14 ".kit[7:13]"  1 18 18 18 18 18 18;
+	setAttr -s 14 ".kot[3:13]"  1 18 18 18 18 18 18 18 
+		1 18 18;
+	setAttr -s 14 ".kix[7:13]"  1 1 1 1 1 1 1;
+	setAttr -s 14 ".kiy[7:13]"  0 0 0 0 0 0 0;
+	setAttr -s 14 ".kox[3:13]"  1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 14 ".koy[3:13]"  0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "eye_rotateZ";
 	rename -uid "4F6BA195-BF4E-A6A9-2DD2-FC990CB34BC3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  1 0 5 0 9 0 12 0 16 0 17 0 19 0 21 0 23 0
-		 27 0 32 0;
-	setAttr -s 11 ".kit[7:10]"  1 18 18 18;
-	setAttr -s 11 ".kot[3:10]"  1 18 18 18 18 18 18 18;
-	setAttr -s 11 ".kix[7:10]"  1 1 1 1;
-	setAttr -s 11 ".kiy[7:10]"  0 0 0 0;
-	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
-	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 14 ".ktv[0:13]"  1 0 5 0 9 0 12 0 16 0 17 0 19 0 21 0 23 0
+		 27 0 32 0 56 0 62 0 73.360544217687078 0;
+	setAttr -s 14 ".kit[7:13]"  1 18 18 18 18 18 18;
+	setAttr -s 14 ".kot[3:13]"  1 18 18 18 18 18 18 18 
+		1 18 18;
+	setAttr -s 14 ".kix[7:13]"  1 1 1 1 1 1 1;
+	setAttr -s 14 ".kiy[7:13]"  0 0 0 0 0 0 0;
+	setAttr -s 14 ".kox[3:13]"  1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 14 ".koy[3:13]"  0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "eye_scaleX";
 	rename -uid "CB0CB3CC-BF4D-C775-6612-66931ABC2356";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  1 1 5 1 9 1 12 1 16 1 17 1 19 1 21 1 23 1
-		 27 1 32 1;
-	setAttr -s 11 ".kit[7:10]"  1 18 18 18;
-	setAttr -s 11 ".kot[3:10]"  1 18 18 18 18 18 18 18;
-	setAttr -s 11 ".kix[7:10]"  1 1 1 1;
-	setAttr -s 11 ".kiy[7:10]"  0 0 0 0;
-	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
-	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 14 ".ktv[0:13]"  1 1 5 1 9 1 12 1 16 1 17 1 19 1 21 1 23 1
+		 27 1 32 1 56 1 62 1 73.360544217687078 1;
+	setAttr -s 14 ".kit[7:13]"  1 18 18 18 18 18 18;
+	setAttr -s 14 ".kot[3:13]"  1 18 18 18 18 18 18 18 
+		1 18 18;
+	setAttr -s 14 ".kix[7:13]"  1 1 1 1 1 1 1;
+	setAttr -s 14 ".kiy[7:13]"  0 0 0 0 0 0 0;
+	setAttr -s 14 ".kox[3:13]"  1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 14 ".koy[3:13]"  0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "eye_scaleY";
 	rename -uid "6F09D7BD-FF45-D3A8-4D00-6B88A88C81C6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  1 1 5 1 9 1 12 1 16 0.047540310854539761
-		 17 0.16208572174078967 19 0.16208572174078967 21 1 23 1 27 1 32 1;
-	setAttr -s 11 ".kit[7:10]"  1 18 18 18;
-	setAttr -s 11 ".kot[3:10]"  1 18 18 18 18 18 18 18;
-	setAttr -s 11 ".kix[7:10]"  1 1 1 1;
-	setAttr -s 11 ".kiy[7:10]"  0 0 0 0;
-	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
-	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 14 ".ktv[0:13]"  1 1 5 1 9 1 12 1 16 0.047540310854539761
+		 17 0.16208572174078967 19 0.16208572174078967 21 1 23 1 27 1 32 1 56 1 62 1 73.360544217687078 1;
+	setAttr -s 14 ".kit[7:13]"  1 18 18 18 18 18 18;
+	setAttr -s 14 ".kot[3:13]"  1 18 18 18 18 18 18 18 
+		1 18 18;
+	setAttr -s 14 ".kix[7:13]"  1 1 1 1 1 1 1;
+	setAttr -s 14 ".kiy[7:13]"  0 0 0 0 0 0 0;
+	setAttr -s 14 ".kox[3:13]"  1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 14 ".koy[3:13]"  0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "eye_scaleZ";
 	rename -uid "339B5525-2148-0341-E2D1-9EBB35FC42BE";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  1 1 5 1 9 1 12 1 16 1 17 1 19 1 21 1 23 1
-		 27 1 32 1;
-	setAttr -s 11 ".kit[7:10]"  1 18 18 18;
-	setAttr -s 11 ".kot[3:10]"  1 18 18 18 18 18 18 18;
-	setAttr -s 11 ".kix[7:10]"  1 1 1 1;
-	setAttr -s 11 ".kiy[7:10]"  0 0 0 0;
-	setAttr -s 11 ".kox[3:10]"  1 1 1 1 1 1 1 1;
-	setAttr -s 11 ".koy[3:10]"  0 0 0 0 0 0 0 0;
+	setAttr -s 14 ".ktv[0:13]"  1 1 5 1 9 1 12 1 16 1 17 1 19 1 21 1 23 1
+		 27 1 32 1 56 1 62 1 73.360544217687078 1;
+	setAttr -s 14 ".kit[7:13]"  1 18 18 18 18 18 18;
+	setAttr -s 14 ".kot[3:13]"  1 18 18 18 18 18 18 18 
+		1 18 18;
+	setAttr -s 14 ".kix[7:13]"  1 1 1 1 1 1 1;
+	setAttr -s 14 ".kiy[7:13]"  0 0 0 0 0 0 0;
+	setAttr -s 14 ".kox[3:13]"  1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 14 ".koy[3:13]"  0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "eye_scaleY1";
 	rename -uid "D246C846-7948-BC90-BEA9-C68AF62A0ED9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  1 1 5 1 9 1 12 1 16 0.047540310854539761
-		 17 0.16208572174078967 19 0.16208572174078967 21 1 23 1 27 1 32 1;
-	setAttr -s 11 ".kit[10]"  1;
-	setAttr -s 11 ".kot[8:10]"  1 18 18;
-	setAttr -s 11 ".kix[10]"  1;
-	setAttr -s 11 ".kiy[10]"  0;
-	setAttr -s 11 ".kox[8:10]"  1 1 1;
-	setAttr -s 11 ".koy[8:10]"  0 0 0;
+	setAttr -s 14 ".ktv[0:13]"  1 1 5 1 9 1 12 1 16 0.047540310854539761
+		 17 0.16208572174078967 19 0.16208572174078967 21 1 23 1 27 1 32 1 56 1 68.571428401360549 1
+		 81.142857142857139 1;
+	setAttr -s 14 ".kit[10:13]"  1 18 1 18;
+	setAttr -s 14 ".kot[8:13]"  1 18 18 1 18 18;
+	setAttr -s 14 ".kix[10:13]"  1 1 1 1;
+	setAttr -s 14 ".kiy[10:13]"  0 0 0 0;
+	setAttr -s 14 ".kox[8:13]"  1 1 1 1 1 1;
+	setAttr -s 14 ".koy[8:13]"  0 0 0 0 0 0;
 createNode animCurveTU -n "eye_scaleX1";
 	rename -uid "7B731F65-1F4E-01A4-7DDF-0FB9F147D692";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  1 1 5 1 9 1 12 1 16 1 17 1 19 1 21 1 23 1
-		 27 1 32 1;
-	setAttr -s 11 ".kit[10]"  1;
-	setAttr -s 11 ".kot[8:10]"  1 18 18;
-	setAttr -s 11 ".kix[10]"  1;
-	setAttr -s 11 ".kiy[10]"  0;
-	setAttr -s 11 ".kox[8:10]"  1 1 1;
-	setAttr -s 11 ".koy[8:10]"  0 0 0;
+	setAttr -s 14 ".ktv[0:13]"  1 1 5 1 9 1 12 1 16 1 17 1 19 1 21 1 23 1
+		 27 1 32 1 56 1 68.571428401360549 1 81.142857142857139 1;
+	setAttr -s 14 ".kit[10:13]"  1 18 1 18;
+	setAttr -s 14 ".kot[8:13]"  1 18 18 1 18 18;
+	setAttr -s 14 ".kix[10:13]"  1 1 1 1;
+	setAttr -s 14 ".kiy[10:13]"  0 0 0 0;
+	setAttr -s 14 ".kox[8:13]"  1 1 1 1 1 1;
+	setAttr -s 14 ".koy[8:13]"  0 0 0 0 0 0;
 createNode animCurveTU -n "eye_scaleZ1";
 	rename -uid "CB476E0A-B645-7F43-89A9-A7BB18746C6B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  1 1 5 1 9 1 12 1 16 1 17 1 19 1 21 1 23 1
-		 27 1 32 1;
-	setAttr -s 11 ".kit[10]"  1;
-	setAttr -s 11 ".kot[8:10]"  1 18 18;
-	setAttr -s 11 ".kix[10]"  1;
-	setAttr -s 11 ".kiy[10]"  0;
-	setAttr -s 11 ".kox[8:10]"  1 1 1;
-	setAttr -s 11 ".koy[8:10]"  0 0 0;
+	setAttr -s 14 ".ktv[0:13]"  1 1 5 1 9 1 12 1 16 1 17 1 19 1 21 1 23 1
+		 27 1 32 1 56 1 68.571428401360549 1 81.142857142857139 1;
+	setAttr -s 14 ".kit[10:13]"  1 18 1 18;
+	setAttr -s 14 ".kot[8:13]"  1 18 18 1 18 18;
+	setAttr -s 14 ".kix[10:13]"  1 1 1 1;
+	setAttr -s 14 ".kiy[10:13]"  0 0 0 0;
+	setAttr -s 14 ".kox[8:13]"  1 1 1 1 1 1;
+	setAttr -s 14 ".koy[8:13]"  0 0 0 0 0 0;
 createNode animCurveTL -n "eye_translateX1";
 	rename -uid "76EED6C2-0F4A-3A62-FF54-94AF13CA5810";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  1 0.50614218861093596 5 0.5848815409717496
+	setAttr -s 14 ".ktv[0:13]"  1 0.50614218861093596 5 0.5848815409717496
 		 9 0.35585241344319724 12 0.33368127270607473 16 0.38964515918786358 17 0.36545181670387006
 		 19 0.36545181670387006 21 0.24739844250570228 23 0.32232767876635637 27 0.42936216545813011
-		 32 0.38823414133863088;
-	setAttr -s 11 ".kit[10]"  1;
-	setAttr -s 11 ".kot[8:10]"  1 18 18;
-	setAttr -s 11 ".kix[10]"  1;
-	setAttr -s 11 ".kiy[10]"  0;
-	setAttr -s 11 ".kox[8:10]"  0.80851213130909227 1 1;
-	setAttr -s 11 ".koy[8:10]"  0.58847950986081843 0 0;
+		 32 0.38823414133863088 56 0.53626807219899852 68.571428401360549 0.44269833841299022
+		 81.142857142857139 0.51407895397856296;
+	setAttr -s 14 ".kit[10:13]"  1 18 1 18;
+	setAttr -s 14 ".kot[8:13]"  1 18 18 1 18 18;
+	setAttr -s 14 ".kix[10:13]"  1 1 1 1;
+	setAttr -s 14 ".kiy[10:13]"  0 0 0 0;
+	setAttr -s 14 ".kox[8:13]"  0.80851213130909227 1 1 1 1 1;
+	setAttr -s 14 ".koy[8:13]"  0.58847950986081843 0 0 0 0 0;
 createNode animCurveTL -n "eye_translateY1";
 	rename -uid "70BD1A6A-2846-E67F-52AA-789C77F3270B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  1 -0.17059250516716659 5 -0.052165896557446509
+	setAttr -s 14 ".ktv[0:13]"  1 -0.17059250516716659 5 -0.052165896557446509
 		 9 0.21742845399314059 12 0.0033477560653975835 16 -1.1185102563082183 17 -0.97497291481902126
 		 19 -0.97497291481902126 21 -0.14997600850046103 23 0.062152658875868509 27 0.036910223232111364
-		 32 -0.067411692018514782;
-	setAttr -s 11 ".kit[10]"  1;
-	setAttr -s 11 ".kot[8:10]"  1 18 18;
-	setAttr -s 11 ".kix[10]"  1;
-	setAttr -s 11 ".kiy[10]"  0;
-	setAttr -s 11 ".kox[8:10]"  1 0.94517550548873408 1;
-	setAttr -s 11 ".koy[8:10]"  0 -0.32656280226644924 0;
+		 32 -0.067411692018514782 56 -0.26329140800431916 68.571428401360549 0.13754066769293191
+		 81.142857142857139 0.13266670264685565;
+	setAttr -s 14 ".kit[10:13]"  1 18 1 18;
+	setAttr -s 14 ".kot[8:13]"  1 18 18 1 18 18;
+	setAttr -s 14 ".kix[10:13]"  1 1 1 1;
+	setAttr -s 14 ".kiy[10:13]"  0 0 0 0;
+	setAttr -s 14 ".kox[8:13]"  1 0.94517550548873408 0.97049706363219979 
+		1 1 1;
+	setAttr -s 14 ".koy[8:13]"  0 -0.32656280226644924 -0.24111293926556049 
+		0 0 0;
 createNode animCurveTL -n "eye_translateZ1";
 	rename -uid "FEC59F6F-FB40-28F5-9506-2CA15E4225D3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  1 0.1984217176737951 5 -0.012350602747948157
+	setAttr -s 14 ".ktv[0:13]"  1 0.1984217176737951 5 -0.012350602747948157
 		 9 0.06328344737175548 12 -0.067486168495127077 16 -0.059736077114840358 17 -0.14107401738944747
 		 19 -0.14107401738944747 21 0.41564918346318125 23 0.53712452249700082 27 0.50723164800129994
-		 32 0.44893766023052067;
-	setAttr -s 11 ".kit[10]"  1;
-	setAttr -s 11 ".kot[8:10]"  1 18 18;
-	setAttr -s 11 ".kix[10]"  1;
-	setAttr -s 11 ".kiy[10]"  0;
-	setAttr -s 11 ".kox[8:10]"  1 0.97344519086871073 1;
-	setAttr -s 11 ".koy[8:10]"  0 -0.22892020525628398 0;
+		 32 0.44893766023052067 56 0.31947319511979722 68.571428401360549 -0.0088097567618190837
+		 81.142857142857139 -0.023495732708343986;
+	setAttr -s 14 ".kit[10:13]"  1 18 1 18;
+	setAttr -s 14 ".kot[8:13]"  1 18 18 1 18 18;
+	setAttr -s 14 ".kix[10:13]"  1 0.95772164285341321 1 1;
+	setAttr -s 14 ".kiy[10:13]"  0 -0.28769646297818696 0 0;
+	setAttr -s 14 ".kox[8:13]"  1 0.97344519086871073 0.98814185636005358 
+		1 0.99648136318122715 1;
+	setAttr -s 14 ".koy[8:13]"  0 -0.22892020525628398 -0.15354371269871978 
+		0 -0.083814633760954091 0;
 createNode animCurveTU -n "eye_visibility1";
 	rename -uid "05C83111-7542-0A74-32FA-AAAC12C85B8A";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  1 1 5 1 9 1 12 1 16 1 17 0 19 1 21 1 23 1
-		 27 1 32 1;
-	setAttr -s 11 ".kit[0:10]"  9 9 9 9 9 9 9 9 
-		9 9 1;
-	setAttr -s 11 ".kix[10]"  1;
-	setAttr -s 11 ".kiy[10]"  0;
+	setAttr -s 14 ".ktv[0:13]"  1 1 5 1 9 1 12 1 16 1 17 0 19 1 21 1 23 1
+		 27 1 32 1 56 1 68.571428401360549 1 81.142857142857139 1;
+	setAttr -s 14 ".kit[0:13]"  9 9 9 9 9 9 9 9 
+		9 9 1 9 1 9;
+	setAttr -s 14 ".kix[10:13]"  1 1 1 1;
+	setAttr -s 14 ".kiy[10:13]"  0 0 0 0;
 createNode animCurveTA -n "eye_rotateX1";
 	rename -uid "41428D8E-1744-5842-C986-9B8A6002D115";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  1 0 5 0 9 0 12 0 16 0 17 0 19 0 21 0 23 0
-		 27 0 32 0;
-	setAttr -s 11 ".kit[10]"  1;
-	setAttr -s 11 ".kot[8:10]"  1 18 18;
-	setAttr -s 11 ".kix[10]"  1;
-	setAttr -s 11 ".kiy[10]"  0;
-	setAttr -s 11 ".kox[8:10]"  1 1 1;
-	setAttr -s 11 ".koy[8:10]"  0 0 0;
+	setAttr -s 14 ".ktv[0:13]"  1 0 5 0 9 0 12 0 16 0 17 0 19 0 21 0 23 0
+		 27 0 32 0 56 0 68.571428401360549 0 81.142857142857139 0;
+	setAttr -s 14 ".kit[10:13]"  1 18 1 18;
+	setAttr -s 14 ".kot[8:13]"  1 18 18 1 18 18;
+	setAttr -s 14 ".kix[10:13]"  1 1 1 1;
+	setAttr -s 14 ".kiy[10:13]"  0 0 0 0;
+	setAttr -s 14 ".kox[8:13]"  1 1 1 1 1 1;
+	setAttr -s 14 ".koy[8:13]"  0 0 0 0 0 0;
 createNode animCurveTA -n "eye_rotateY1";
 	rename -uid "5CEDE7FF-6F46-1C2B-5754-A59F246ABF60";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  1 0 5 0 9 0 12 0 16 0 17 0 19 0 21 0 23 0
-		 27 0 32 0;
-	setAttr -s 11 ".kit[10]"  1;
-	setAttr -s 11 ".kot[8:10]"  1 18 18;
-	setAttr -s 11 ".kix[10]"  1;
-	setAttr -s 11 ".kiy[10]"  0;
-	setAttr -s 11 ".kox[8:10]"  1 1 1;
-	setAttr -s 11 ".koy[8:10]"  0 0 0;
+	setAttr -s 14 ".ktv[0:13]"  1 0 5 0 9 0 12 0 16 0 17 0 19 0 21 0 23 0
+		 27 0 32 0 56 0 68.571428401360549 0 81.142857142857139 0;
+	setAttr -s 14 ".kit[10:13]"  1 18 1 18;
+	setAttr -s 14 ".kot[8:13]"  1 18 18 1 18 18;
+	setAttr -s 14 ".kix[10:13]"  1 1 1 1;
+	setAttr -s 14 ".kiy[10:13]"  0 0 0 0;
+	setAttr -s 14 ".kox[8:13]"  1 1 1 1 1 1;
+	setAttr -s 14 ".koy[8:13]"  0 0 0 0 0 0;
 createNode animCurveTA -n "eye_rotateZ1";
 	rename -uid "8601213B-894A-AD92-EDA4-728BEF9F3709";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  1 0 5 0 9 0 12 0 16 0 17 0 19 0 21 0 23 0
-		 27 0 32 0;
-	setAttr -s 11 ".kit[10]"  1;
-	setAttr -s 11 ".kot[8:10]"  1 18 18;
-	setAttr -s 11 ".kix[10]"  1;
-	setAttr -s 11 ".kiy[10]"  0;
-	setAttr -s 11 ".kox[8:10]"  1 1 1;
-	setAttr -s 11 ".koy[8:10]"  0 0 0;
+	setAttr -s 14 ".ktv[0:13]"  1 0 5 0 9 0 12 0 16 0 17 0 19 0 21 0 23 0
+		 27 0 32 0 56 0 68.571428401360549 0 81.142857142857139 0;
+	setAttr -s 14 ".kit[10:13]"  1 18 1 18;
+	setAttr -s 14 ".kot[8:13]"  1 18 18 1 18 18;
+	setAttr -s 14 ".kix[10:13]"  1 1 1 1;
+	setAttr -s 14 ".kiy[10:13]"  0 0 0 0;
+	setAttr -s 14 ".kox[8:13]"  1 1 1 1 1 1;
+	setAttr -s 14 ".koy[8:13]"  0 0 0 0 0 0;
 select -ne :time1;
-	setAttr ".o" 1;
-	setAttr ".unw" 1;
+	setAttr ".o" 77;
+	setAttr ".unw" 77;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
