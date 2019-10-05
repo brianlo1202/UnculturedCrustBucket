@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: MC_Adultma.ma
-//Last modified: Fri, Oct 04, 2019 11:01:12 PM
+//Last modified: Fri, Oct 04, 2019 11:05:18 PM
 //Codeset: UTF-8
 requires maya "2018";
 requires "stereoCamera" "10.0";
@@ -18,13 +18,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "72388E75-1C45-B9C9-75D5-7CB98EED0A2E";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -12.318812470181641 38.75546866889438 148.30472301410259 ;
-	setAttr ".r" -type "double3" -20.738352729666186 -730.19999999934532 4.0395357585719611e-16 ;
+	setAttr ".t" -type "double3" -49.899806196940709 53.140723859295804 374.99802978323112 ;
+	setAttr ".r" -type "double3" -9.9383527296667697 -728.99999999933846 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "02FAB9D9-954B-702A-E3B9-D0B955669203";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 158.46505105017519;
+	setAttr ".coi" 382.94332896146852;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
