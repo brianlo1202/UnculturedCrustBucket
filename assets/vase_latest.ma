@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: vase_latest.ma
-//Last modified: Fri, Oct 04, 2019 11:40:29 PM
+//Last modified: Fri, Oct 04, 2019 11:49:26 PM
 //Codeset: UTF-8
 requires maya "2018";
 requires "stereoCamera" "10.0";
@@ -16,8 +16,8 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "8FDB9559-CF45-BC7D-B0D4-2C9E51CFAF37";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -10.866491131577309 10.955368541738205 3.1650551870938406 ;
-	setAttr ".r" -type "double3" -38.138352729607341 -71.399999999998755 0 ;
+	setAttr ".t" -type "double3" -13.220747324238788 7.8321532634260898 1.9847767871921682 ;
+	setAttr ".r" -type "double3" -24.338352729607806 -82.199999999998823 1.171772194013565e-14 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "EE3576D1-CD48-49B7-82FF-8888516CDA2C";
 	setAttr -k off ".v" no;
