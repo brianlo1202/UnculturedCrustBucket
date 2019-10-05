@@ -1,0 +1,84 @@
+//Maya ASCII 2018 scene
+//Name: 10_RENDER_CAMERA.ma
+//Last modified: Sat, Oct 05, 2019 07:30:46 AM
+//Codeset: UTF-8
+requires maya "2018";
+requires "stereoCamera" "10.0";
+requires "mtoa" "3.3.0.1";
+currentUnit -l centimeter -a degree -t film;
+fileInfo "application" "maya";
+fileInfo "product" "Maya 2018";
+fileInfo "version" "2018";
+fileInfo "cutIdentifier" "201706261615-f9658c4cfc";
+fileInfo "osv" "Mac OS X 10.13.6";
+fileInfo "license" "student";
+createNode transform -n "RENDER_CAMERA";
+	rename -uid "DE850BC4-2E42-2A24-07F9-0FBC44077407";
+	setAttr ".t" -type "double3" 0.55978303644531002 2.3576005512706191 -3.175260538273506 ;
+	setAttr -l on ".tx";
+	setAttr -l on ".ty";
+	setAttr -l on ".tz";
+	setAttr ".r" -type "double3" -1.5383527296005695 13.400000000004406 -2.5543482322641915e-17 ;
+	setAttr -l on ".rx";
+	setAttr -l on ".ry";
+	setAttr -l on ".rz";
+createNode camera -n "RENDER_CAMERAShape" -p "RENDER_CAMERA";
+	rename -uid "1F42F221-9B4D-D7C8-7AFA-BC87C6A597C6";
+	setAttr -k off ".v";
+	setAttr ".ovr" 1.3;
+	setAttr ".fl" 34.999999999999986;
+	setAttr -l on ".coi" 2.8219555946973296;
+	setAttr -l on ".ow";
+	setAttr ".imn" -type "string" "persp";
+	setAttr ".den" -type "string" "persp_depth";
+	setAttr ".man" -type "string" "persp_mask";
+	setAttr ".tp" -type "double3" -0.088657233341431621 2.1710198912199439 -5.5456532403343655 ;
+	setAttr ".hc" -type "string" "viewSet -p %camera";
+	setAttr ".dr" yes;
+	setAttr ".ai_translator" -type "string" "perspective";
+select -ne :time1;
+	setAttr ".o" 1;
+	setAttr ".unw" 1;
+select -ne :hardwareRenderingGlobals;
+	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
+	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
+		 1 1 1 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 ;
+	setAttr ".msaa" yes;
+	setAttr ".fprt" yes;
+select -ne :renderPartition;
+	setAttr -s 49 ".st";
+select -ne :renderGlobalsList1;
+select -ne :defaultShaderList1;
+	setAttr -s 51 ".s";
+select -ne :postProcessList1;
+	setAttr -s 2 ".p";
+select -ne :defaultRenderUtilityList1;
+	setAttr -s 62 ".u";
+select -ne :defaultRenderingList1;
+	setAttr -s 13 ".r";
+select -ne :lightList1;
+	setAttr -s 3 ".l";
+select -ne :defaultTextureList1;
+	setAttr -s 62 ".tx";
+select -ne :initialShadingGroup;
+	setAttr ".ro" yes;
+select -ne :initialParticleSE;
+	setAttr ".ro" yes;
+select -ne :defaultRenderGlobals;
+	setAttr ".ren" -type "string" "arnold";
+	setAttr ".outf" 51;
+	setAttr ".imfkey" -type "string" "jpeg";
+	setAttr ".an" yes;
+	setAttr ".ef" 120;
+	setAttr ".pff" yes;
+select -ne :defaultResolution;
+	setAttr ".pa" 1;
+	setAttr ".dar" 1.7769999504089355;
+select -ne :defaultLightSet;
+	setAttr -s 3 ".dsm";
+select -ne :hardwareRenderGlobals;
+	setAttr ".ctrs" 256;
+	setAttr ".btrs" 512;
+select -ne :ikSystem;
+// End of 10_RENDER_CAMERA.ma
