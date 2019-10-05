@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
-//Name: MC_Adultma.ma
-//Last modified: Fri, Oct 04, 2019 11:01:12 PM
+//Name: Father.ma
+//Last modified: Fri, Oct 04, 2019 11:06:45 PM
 //Codeset: UTF-8
 requires maya "2018";
 requires "stereoCamera" "10.0";
@@ -18,13 +18,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "72388E75-1C45-B9C9-75D5-7CB98EED0A2E";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -12.318812470181641 38.75546866889438 148.30472301410259 ;
-	setAttr ".r" -type "double3" -20.738352729666186 -730.19999999934532 4.0395357585719611e-16 ;
+	setAttr ".t" -type "double3" -23.659950114597002 23.75020814894966 209.32609868609816 ;
+	setAttr ".r" -type "double3" -9.9383527296667697 -728.99999999933846 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "02FAB9D9-954B-702A-E3B9-D0B955669203";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 158.46505105017519;
+	setAttr ".coi" 212.65087107094604;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -4866,7 +4866,7 @@ createNode transform -n "pants" -p "Adult";
 createNode mesh -n "pantsShape" -p "pants";
 	rename -uid "295E94D7-4C4A-5697-68FC-D28FE8CAC8AE";
 	setAttr -k off ".v";
-	setAttr ".iog[0].og[0].gcl" -type "componentList" 124 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]";
+	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:123]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".pv" -type "double2" 0.5 0.828125 ;
@@ -7118,24 +7118,24 @@ createNode mesh -n "TieShape1Orig" -p "Tie";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "8D373D71-C14A-5175-FAEF-EBBEE1E8C5C1";
+	rename -uid "502FF649-9C44-4999-37EC-50B7EDAFE4C0";
 	setAttr -s 6 ".lnk";
 	setAttr -s 6 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "29F49DCD-1D4C-D4BD-FF50-DD8AF34D1BF5";
+	rename -uid "71B2868C-3B45-F2B3-DE49-04B8A6DCBCD5";
 	setAttr -s 2 ".dli[1]"  1;
 	setAttr -s 2 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "46A4A2C5-3A44-3F43-2BE0-129F3D7D9F12";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "0FF979E3-9F41-1598-16A1-54B7D77BC96B";
+	rename -uid "FCEA5620-864E-9C02-B8CB-B8A58DB686CC";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "5BAB138E-A040-A61C-E783-1A83EB5EBF37";
 	setAttr ".g" yes;
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "46020514-5F48-E9A4-C97B-B18C15DC642F";
+	rename -uid "3F8A467A-F240-29B9-169D-C8878B0870EB";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "8073C828-824F-69E6-40AA-DD9679DD082D";
+	rename -uid "33CF9D5D-404A-0701-A8CA-36B9551370BA";
 createNode script -n "uiConfigurationScriptNode";
 	rename -uid "10F0715B-1442-02DB-0880-6295FA4C5669";
 	setAttr ".b" -type "string" (
@@ -7634,4 +7634,4 @@ connectAttr "groupId3.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId7.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId8.msg" ":initialShadingGroup.gn" -na;
 connectAttr "directionalLight.iog" ":defaultLightSet.dsm" -na;
-// End of MC_Adultma.ma
+// End of Father.ma
