@@ -1,6 +1,6 @@
 //Maya ASCII 2018ff09 scene
 //Name: Father.ma
-//Last modified: Sat, Oct 05, 2019 12:10:43 AM
+//Last modified: Sat, Oct 05, 2019 12:11:34 AM
 //Codeset: UTF-8
 requires maya "2018ff09";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiToon"
@@ -18,8 +18,8 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "72388E75-1C45-B9C9-75D5-7CB98EED0A2E";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 65.575980457046114 13.958891438706818 213.866587815597 ;
-	setAttr ".r" -type "double3" -11.738352729700392 -705.39999999985969 0 ;
+	setAttr ".t" -type "double3" -81.724388522094159 -24.177094021953337 210.20223624095115 ;
+	setAttr ".r" -type "double3" 0.86164727029990806 -742.9999999998488 -8.0981919940055075e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "02FAB9D9-954B-702A-E3B9-D0B955669203";
 	setAttr -k off ".v" no;
