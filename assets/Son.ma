@@ -1,6 +1,6 @@
 //Maya ASCII 2018ff09 scene
 //Name: Son.ma
-//Last modified: Fri, Oct 04, 2019 11:34:42 PM
+//Last modified: Fri, Oct 04, 2019 11:36:03 PM
 //Codeset: UTF-8
 requires maya "2018ff09";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiToon"
@@ -18,8 +18,8 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "4B1DF00C-BA4F-C7A7-79C8-C6B89787F41C";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1.1354782398206018 0.33424787005594536 4.7756097097945442 ;
-	setAttr ".r" -type "double3" -5.1383527312075135 -1065.3999999991997 -2.0541777804295033e-16 ;
+	setAttr ".t" -type "double3" 3.3428241648310544 0.033771222903618538 3.5207099345740156 ;
+	setAttr ".r" -type "double3" -1.5383527312075955 -1034.5999999991961 0 ;
 	setAttr ".rp" -type "double3" 4.3345321499472975e-16 -5.0994495881732913e-16 -7.4597662546992144e-15 ;
 	setAttr ".rpt" -type "double3" -9.4326474691466186e-16 -1.1273868533872939e-15 1.689998434070661e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
@@ -6719,25 +6719,25 @@ createNode ikHandle -n "ikHandle2_leftFoot" -p "leftFootIK";
 	setAttr ".pv" -type "double3" 8.0793699370210579e-15 0.11982298534200364 1.9964073863276828 ;
 	setAttr ".roc" yes;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "3F52B12A-744A-0002-09D3-DEA1988E81E8";
+	rename -uid "5CA30E8A-8240-4C0B-7254-DCBB8832B30B";
 	setAttr -s 12 ".lnk";
 	setAttr -s 12 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "F3FF74CC-F949-49E4-FDDB-1B8396DF472B";
+	rename -uid "7275F9EE-4645-0A31-5B44-1D8ACAFEA16D";
 	setAttr ".cdl" 1;
 	setAttr -s 2 ".dli[1]"  1;
 	setAttr -s 2 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "72BE213A-C145-2D4F-3E59-15926E031558";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "B2259E91-DF4F-9E5B-4A0A-4085316E5178";
+	rename -uid "CEC0C827-E84A-55B8-287B-1BB9949A5107";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "B5FC8A46-5140-0C29-84B5-0B85A95C7990";
 	setAttr ".g" yes;
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "637B1E4B-3543-6219-7335-CE8509D9E1D6";
+	rename -uid "6AB74A65-B24B-8796-2084-139D1A616417";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "A53CC81D-F847-EEB6-070E-518F8CA9A2EE";
+	rename -uid "3C982BB3-0942-AAEA-DD3B-57AC0F6012C0";
 createNode script -n "uiConfigurationScriptNode";
 	rename -uid "0B74CFA9-1A40-D8E6-089C-FDB403B2B4A6";
 	setAttr ".b" -type "string" (
