@@ -1,6 +1,10 @@
 //Maya ASCII 2018 scene
 //Name: Son.ma
+<<<<<<< HEAD
 //Last modified: Fri, Oct 04, 2019 08:13:06 PM
+=======
+//Last modified: Fri, Oct 04, 2019 07:36:27 PM
+>>>>>>> b9dd19a8360d0bd3c346ae6c773b3ac8b44e33ec
 //Codeset: UTF-8
 requires maya "2018";
 requires "stereoCamera" "10.0";
@@ -17,8 +21,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "4B1DF00C-BA4F-C7A7-79C8-C6B89787F41C";
 	setAttr ".v" no;
+<<<<<<< HEAD
 	setAttr ".t" -type "double3" -2.9622747114074706 1.7545642949229698 7.9236628296840852 ;
 	setAttr ".r" -type "double3" -15.338352731971655 -1463.0000000003608 -1.2957107190457974e-15 ;
+=======
+	setAttr ".t" -type "double3" 0.56189642830468289 -0.12225857460095882 4.6648711123957112 ;
+	setAttr ".r" -type "double3" 1.4616472701354482 367.39999999991824 5.0113554556162674e-17 ;
+>>>>>>> b9dd19a8360d0bd3c346ae6c773b3ac8b44e33ec
 	setAttr ".rp" -type "double3" 4.3345321499472975e-16 -5.0994495881732913e-16 -7.4597662546992144e-15 ;
 	setAttr ".rpt" -type "double3" -9.4326474691466186e-16 -1.1273868533872939e-15 1.689998434070661e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
@@ -28,7 +37,11 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr ".ncp" 0.0032808398950131233;
 	setAttr ".fcp" 328.08398950131232;
 	setAttr ".fd" 0.16404199475065617;
+<<<<<<< HEAD
 	setAttr ".coi" 8.6848311374134219;
+=======
+	setAttr ".coi" 4.6354435213353407;
+>>>>>>> b9dd19a8360d0bd3c346ae6c773b3ac8b44e33ec
 	setAttr ".ow" 0.32808398950131235;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
@@ -5769,25 +5782,43 @@ createNode mesh -n "shirtShape" -p "shirt";
 	setAttr ".dsm" 2;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode lightLinker -s -n "lightLinker1";
+<<<<<<< HEAD
 	rename -uid "C83B6049-4943-46FB-29EA-90955DF43FEC";
 	setAttr -s 6 ".lnk";
 	setAttr -s 6 ".slnk";
 createNode displayLayerManager -n "layerManager";
 	rename -uid "AF57891E-F34D-F1CA-8D11-84A9013F23A9";
+=======
+	rename -uid "F7D0FF7C-8644-11C1-6F7F-20B64D1888CD";
+	setAttr -s 6 ".lnk";
+	setAttr -s 6 ".slnk";
+createNode displayLayerManager -n "layerManager";
+	rename -uid "E87406A7-5A4D-C092-5B1C-C5AF6445DF17";
+>>>>>>> b9dd19a8360d0bd3c346ae6c773b3ac8b44e33ec
 	setAttr ".cdl" 1;
 	setAttr -s 2 ".dli[1]"  1;
 	setAttr -s 2 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "72BE213A-C145-2D4F-3E59-15926E031558";
 createNode renderLayerManager -n "renderLayerManager";
+<<<<<<< HEAD
 	rename -uid "6952F355-2A4F-BFE3-D7BA-259C7ED9491C";
+=======
+	rename -uid "7AE39413-EC41-DEFD-2529-D4811D0F344F";
+>>>>>>> b9dd19a8360d0bd3c346ae6c773b3ac8b44e33ec
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "B5FC8A46-5140-0C29-84B5-0B85A95C7990";
 	setAttr ".g" yes;
 createNode shapeEditorManager -n "shapeEditorManager";
+<<<<<<< HEAD
 	rename -uid "9B289AB7-8844-D046-A532-0C8217130195";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
 	rename -uid "C08BCE45-824B-F2C1-BA48-CF9635B3D196";
+=======
+	rename -uid "310FF3E2-1B4C-5146-BA51-8CB80D4DDCA8";
+createNode poseInterpolatorManager -n "poseInterpolatorManager";
+	rename -uid "4177F373-6C48-CD4B-8DE0-C58AA70D9237";
+>>>>>>> b9dd19a8360d0bd3c346ae6c773b3ac8b44e33ec
 createNode script -n "uiConfigurationScriptNode";
 	rename -uid "0B74CFA9-1A40-D8E6-089C-FDB403B2B4A6";
 	setAttr ".b" -type "string" (
@@ -6171,6 +6202,21 @@ select -ne :defaultLightSet;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
+<<<<<<< HEAD
+=======
+connectAttr "Unselectables.di" "sideRefImage.do";
+connectAttr ":defaultColorMgtGlobals.cme" "sideRefImageShape.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "sideRefImageShape.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "sideRefImageShape.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "sideRefImageShape.ws";
+connectAttr ":sideShape.msg" "sideRefImageShape.ltc";
+connectAttr "Unselectables.di" "frontRefImage.do";
+connectAttr ":defaultColorMgtGlobals.cme" "frontRefImageShape.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "frontRefImageShape.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "frontRefImageShape.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "frontRefImageShape.ws";
+connectAttr ":frontShape.msg" "frontRefImageShape.ltc";
+>>>>>>> b9dd19a8360d0bd3c346ae6c773b3ac8b44e33ec
 connectAttr "groupId8.id" "hairShape.iog.og[1].gid";
 connectAttr "set1.mwc" "hairShape.iog.og[1].gco";
 connectAttr "groupId9.id" "bodyShape.iog.og[0].gid";
