@@ -1,6 +1,6 @@
 //Maya ASCII 2018ff09 scene
 //Name: Son.ma
-//Last modified: Sat, Oct 05, 2019 01:18:56 AM
+//Last modified: Sat, Oct 05, 2019 01:22:27 AM
 //Codeset: UTF-8
 requires maya "2018ff09";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiToon"
@@ -9669,7 +9669,7 @@ createNode groupParts -n "groupParts17";
 createNode blendShape -n "blendShape_eyes";
 	rename -uid "3B686931-354B-58F9-A2C0-2C8A0091627D";
 	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
-	setAttr -s 2 ".w[0:1]"  0 1;
+	setAttr -s 2 ".w[0:1]"  0 0;
 	setAttr -s 2 ".it[0].itg";
 	setAttr ".it[0].itg[0].iti[6000].ipt" -type "pointArray" 10 0.023486771160178832
 		 -0.19006083776808014 -0.0076743470167155853 1 -0.041219891637435752 0.056166551511066934
