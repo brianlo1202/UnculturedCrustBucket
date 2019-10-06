@@ -1,6 +1,6 @@
 //Maya ASCII 2018ff09 scene
 //Name: Father_COMPLETE_RIG.ma
-//Last modified: Sat, Oct 05, 2019 08:09:55 AM
+//Last modified: Sat, Oct 05, 2019 08:18:25 AM
 //Codeset: UTF-8
 requires maya "2018ff09";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiToon"
@@ -18,17 +18,17 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "72388E75-1C45-B9C9-75D5-7CB98EED0A2E";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 9.5278750842822273 19.236095440441431 27.856137481920857 ;
-	setAttr ".r" -type "double3" -14.13835272970023 -719.39999999983195 9.9397783839292549e-17 ;
+	setAttr ".t" -type "double3" 8.6606544160322319 16.27072644873337 46.219607105740415 ;
+	setAttr ".r" -type "double3" -7.5383527297033153 -706.9999999997774 -1.0200676045782613e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "02FAB9D9-954B-702A-E3B9-D0B955669203";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 70.238860041961772;
+	setAttr ".coi" 35.200844489215775;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -6.5016382217135913 13.832026349509588 11.76566915588481 ;
+	setAttr ".tp" -type "double3" 0.71851539611816406 5.4738569259643555 13.077837944030762 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 	setAttr ".ai_translator" -type "string" "perspective";
 createNode transform -s -n "top";
@@ -7161,7 +7161,7 @@ createNode mesh -n "mouthShape" -p "mouth";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".csh" no;
-	setAttr ".pv" -type "double2" 0.421875 0.84062498807907104 ;
+	setAttr ".pv" -type "double2" 0.5 0.84375 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
@@ -9474,27 +9474,27 @@ createNode parentConstraint -n "Tie_parentConstraint1" -p "Tie";
 	setAttr ".rst" -type "double3" 0 -1.5400093501458922 0 ;
 	setAttr -k on ".w0";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "D00CC3B1-A747-C7AE-C40A-0B9FABA189DE";
+	rename -uid "C27F2FD7-0140-8D99-4768-018DCA43BAE1";
 	setAttr -s 49 ".lnk";
 	setAttr -s 49 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "8E9AB492-4246-5FE5-3F61-97BBBADB12BC";
+	rename -uid "ADEDC995-6C42-20B0-652A-449692A9FDF1";
 	setAttr -s 6 ".dli[1:5]"  1 2 3 4 5;
 	setAttr -s 6 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "46A4A2C5-3A44-3F43-2BE0-129F3D7D9F12";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "6092B101-E24D-2CA3-2651-C1A16B1D74B2";
+	rename -uid "C699BFE8-0A48-E150-84FF-798753CB1EE3";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "5BAB138E-A040-A61C-E783-1A83EB5EBF37";
 	setAttr ".g" yes;
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "0FC09267-5C44-98EC-0291-E1B4D42D567E";
+	rename -uid "A9503B0C-FD43-002A-000A-68A3FC9C7B43";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 3 1 0 5 ;
 	setAttr -s 3 ".bspr";
 	setAttr -s 3 ".obsv";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "77574B70-2D4B-CC8D-DA25-87A018560CF9";
+	rename -uid "E3F9BBDE-0245-6107-6DAA-E9B3E3850385";
 createNode script -n "uiConfigurationScriptNode";
 	rename -uid "10F0715B-1442-02DB-0880-6295FA4C5669";
 	setAttr ".b" -type "string" (
@@ -13536,8 +13536,8 @@ createNode groupParts -n "groupParts14";
 createNode blendShape -n "MouthBlendshapes";
 	rename -uid "D598B86F-9546-0929-6A08-50BB7377CE26";
 	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
-	setAttr -s 2 ".w[0:1]"  0 0;
-	setAttr -s 2 ".it[0].itg";
+	setAttr -s 4 ".w[0:3]"  0 0 0 1;
+	setAttr -s 4 ".it[0].itg";
 	setAttr ".it[0].itg[0].iti[6000].ipt" -type "pointArray" 11 0 -0.72919046878814697
 		 -0.35133698582649231 1 0 -1.1798537969589233 -0.56847459077835083 1 0 -1.1798522472381592
 		 -0.56847387552261353 1 0 -0.72918975353240967 -0.35133662819862366 1 0 -3.585070942335733e-07
@@ -13554,13 +13554,33 @@ createNode blendShape -n "MouthBlendshapes";
 		 1 0.64156430959701538 0.012796853668987751 0.0061657563783228397 1 0 -0.086214050650596619
 		 -0.041539467871189117 1 0 -0.086214050650596619 -0.041539467871189117 1 ;
 	setAttr ".it[0].itg[1].iti[6000].ict" -type "componentList" 1 "vtx[0:10]";
+	setAttr ".it[0].itg[2].iti[6000].ipt" -type "pointArray" 11 0.39202971896156669
+		 0.42538088409855845 0.19362107683809882 1 0 0 0 1 0 0 0 1 -0.39202971896156669 0.42538088409855845
+		 0.19362107683809882 1 0 0.33791685290634632 0.15380999119952321 1 0 0.72307600558269769
+		 0.3291233018389903 1 0 0.72307600558269769 0.3291233018389903 1 0 0.72307600558269769
+		 0.3291233018389903 1 0 0.72307600558269769 0.3291233018389903 1 0 0.33791685290634632
+		 0.15380999119952321 1 0 0.33791686501353979 0.15380998561158776 1 ;
+	setAttr ".it[0].itg[2].iti[6000].ict" -type "componentList" 1 "vtx[0:10]";
+	setAttr ".it[0].itg[3].iti[6000].ipt" -type "pointArray" 11 0.18315750546753207
+		 -0.56075792666206326 -0.25524077976842818 1 -6.9849065420513057e-10 -1.217448085124488
+		 -0.55414713298159768 1 6.9849065420513057e-10 -1.2174466322612716 -0.55414646615463425
+		 1 -0.18315750546753207 -0.56075702680072936 -0.25524037024842983 1 -0.16069475503172392
+		 0.49823421272048929 0.22678180360476752 1 -0.18315750546753207 0.94409117155328204
+		 0.42972298319546098 1 6.9849065420513057e-10 1.2174483609996969 0.55414728009418468
+		 1 -6.9849065420513057e-10 1.2174480894609587 0.55414712991841952 1 0.18315750546753207
+		 0.94409084105018337 0.42972284770257829 1 0.16069475503172392 0.49823421272048929
+		 0.22678180360476752 1 0 7.2085640479002677e-07 3.2811297678847495e-07 1 ;
+	setAttr ".it[0].itg[3].iti[6000].ict" -type "componentList" 1 "vtx[0:10]";
+	setAttr ".it[0].sti" 3;
+	setAttr ".it[0].siw" 1;
 	setAttr ".mlid" 0;
 	setAttr ".mlpr" 0;
-	setAttr -s 2 ".pndr[0:1]"  0 0;
-	setAttr -s 2 ".tgvs[0:1]" yes yes;
-	setAttr -s 2 ".tpvs[0:1]" yes yes;
-	setAttr ".tgdt[0].cid" -type "Int32Array" 2 0 1 ;
-	setAttr ".aal" -type "attributeAlias" {"cloused","weight[0]","sad","weight[1]"} ;
+	setAttr -s 4 ".pndr[0:3]"  0 0 0 0;
+	setAttr -s 4 ".tgvs[0:3]" yes yes yes yes;
+	setAttr -s 4 ".tpvs[0:3]" yes yes yes yes;
+	setAttr ".tgdt[0].cid" -type "Int32Array" 4 0 1 2 3 ;
+	setAttr ".aal" -type "attributeAlias" {"cloused","weight[0]","sad","weight[1]","smile"
+		,"weight[2]","smileClosed","weight[3]"} ;
 createNode tweak -n "tweak6";
 	rename -uid "3C7299DF-234E-013C-4B04-4BB4859F4046";
 createNode objectSet -n "blendShape1Set";
@@ -14336,7 +14356,7 @@ createNode groupParts -n "Father:groupParts22";
 createNode blendShape -n "EyebrowBlendshapes";
 	rename -uid "751D76D8-264A-4CEA-9567-4094393C0A0D";
 	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
-	setAttr ".w[0]"  0;
+	setAttr ".w[0]"  0.5865922;
 	setAttr ".it[0].itg[0].iti[6000].ipt" -type "pointArray" 24 0 0.87871402502059937
 		 0 1 0 -1.574820876121521 0 1 0 -0.65144926309585571 0 1 0 0.87871402502059937 0 1 0
 		 -1.574820876121521 0 1 0 -0.65144926309585571 0 1 0 0.87871402502059937 0 1 0 -1.574820876121521
@@ -14593,7 +14613,7 @@ connectAttr "blendShape1Set.mwc" "mouthShape.iog.og[0].gco";
 connectAttr "groupId17.id" "mouthShape.iog.og[1].gid";
 connectAttr "tweakSet6.mwc" "mouthShape.iog.og[1].gco";
 connectAttr "MouthBlendshapes.og[0]" "mouthShape.i";
-connectAttr "tweak6.vl[0].vt[0]" "mouthShape.twl";
+connectAttr "MouthBlendshapes.it[0].vt[0]" "mouthShape.twl";
 connectAttr "stuffThatMovesWithTheHead.ro" "stuffThatMovesWithTheHead_parentConstraint1.cro"
 		;
 connectAttr "stuffThatMovesWithTheHead.pim" "stuffThatMovesWithTheHead_parentConstraint1.cpim"
